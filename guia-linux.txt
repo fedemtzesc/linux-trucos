@@ -1,0 +1,9 @@
+1. Comando para reiniciar el bash:
+        source ~/.bashrc
+
+2. Comando para ver y/o cambiar las versiones de java que tengo instaladas en 
+    mi equipo Linux:
+    
+    sudo update-alternatives --config java
+    y
+    sudo update-alternatives --config java
