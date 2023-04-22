@@ -1,9 +1,16 @@
-1. Comando para reiniciar el bash:
+1. |Comando para reiniciar el bash:
         source ~/.bashrc
 
-2. Comando para ver y/o cambiar las versiones de java que tengo instaladas en 
+2. |Comando para ver y/o cambiar las versiones de java que tengo instaladas en 
     mi equipo Linux:
     
     sudo update-alternatives --config java
     y
     sudo update-alternatives --config java
+
+3.  Proceso para que git muestre el nombre del branch o rama en la que estamos
+    posiionados:
+
+    https://dev.to/sonyarianto/how-to-add-git-branch-name-to-shell-prompt-in-ubuntu-1gdj
+
+4.  
