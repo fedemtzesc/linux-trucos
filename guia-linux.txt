@@ -13,4 +13,6 @@
 
     https://dev.to/sonyarianto/how-to-add-git-branch-name-to-shell-prompt-in-ubuntu-1gdj
 
-4.  
+4.  Comando para localizar puerto en uso y el proceso que lo esta utulizando:
+
+    sudo ss -lptn 'sport = :8080'
