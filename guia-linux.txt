@@ -20,3 +20,7 @@
 5.  Comando para localizar puerto en uso y el proceso que lo esta utulizando:
 
     sudo ss -lptn 'sport = :8080'
+
+6.  Comando para poder ejecutar un archivo ejecutable dentro de un CD:
+    
+    sudo bash /media/cdrom/VBoxLinuxAdditions.run
