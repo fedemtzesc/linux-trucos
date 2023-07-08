@@ -1,9 +1,10 @@
-1.  Comando para modificar el archovo de bash:
+1.  Comando para modificar el archivo de bash:
 
     sudo nano ~/.bashrc
 
 2.  Comando para reiniciar el bash:
-        source ~/.bashrc
+
+    source ~/.bashrc
 
 3.  Comando para ver y/o cambiar las versiones de java que tengo instaladas en 
     mi equipo Linux:
@@ -24,3 +25,7 @@
 6.  Comando para poder ejecutar un archivo ejecutable dentro de un CD:
     
     sudo bash /media/cdrom/VBoxLinuxAdditions.run
+
+7.  Matar proceso de Mizilla Firefox cuando no quiera arrancar por que ya esta una instancia corriendo:
+
+    kill -9 $(ps -x | grep firefox | awk '{print $1}')
