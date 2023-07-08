@@ -29,3 +29,9 @@
 7.  Matar proceso de Mizilla Firefox cuando no quiera arrancar por que ya esta una instancia corriendo:
 
     kill -9 $(ps -x | grep firefox | awk '{print $1}')
+
+8.  Saber mi IP publica usando un comando de la terminal:
+
+    curl icanhazip.com
+
+
