@@ -34,4 +34,18 @@
 
     curl icanhazip.com
 
+9.  Quitar del Login de Linux usuario que es cuenta de servicio y no usuario:
+
+    Para ocultar el usuario llamado XXX, crear un archivo llamado:
+
+        /var/lib/AccountsService/users/XXX
+
+        usando nano /var/lib/AccountsService/users/XXX
+
+    Despues, le agregamos estas dos lineas:
+
+        [User]
+        SystemAccount=true
+
+    Y guardamos.
 
