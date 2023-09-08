@@ -49,3 +49,33 @@
 
     Y guardamos.
 
+10. Manejo de Variables de Entorno
+
+    a) La definicion de la variable PATH se localiza dentro del archivo /etc/environment
+
+    b) Para establecer un valor en una variable de entorno se usa la siguiente sintaxis:
+        export ENV_VAR=VALUE
+        donde:
+            ENV_VAR: Es el nombre de la variable de entorno
+            VALUE: Es el valor que se le asignara. El cual puede ser por lo general un path...
+
+    c) Para poder visualizar el contenido de una variable de entorno se usa el siguiente comando:
+            echo $ENV_VAR
+
+    d) Para concatenarle otro path a una variable de entorno que contenga paths se hace de la siguiente
+        forma:
+            export ENV_VAR=$ENV_VAR:path_que_necesitamos_concatenar
+        ejemplo:
+            export PATH=$PATH:/home/federico/apps
+
+    e) Para concatenarle otra variable de entorno que contenga paths a una variable de entorno que 
+        contenga paths se hace de la siguiente forma:
+            export ENV_VAR=$ENV_VAR:$OTHER_ENV_VAR_WITH_PATHS
+        ejemplo:
+            export PATH=$PATH:$FDX_HOME
+
+
+
+
+
+
