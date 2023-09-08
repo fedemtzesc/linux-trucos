@@ -74,7 +74,8 @@
         ejemplo:
             export PATH=$PATH:$FDX_HOME
 
-
+    f) OJO: Los programas que estan dentro del path /usr/bin no requiere estar definida su ruta dentro
+        de la variable PATH por que se encuentran y se ejecutan en automatico por Linux
 
 
 

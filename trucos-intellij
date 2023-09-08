@@ -1,0 +1,11 @@
+1. Si falla por la version de JAVA:
+	a) Tecleamos en una terminal: java -version
+	   y si esa version no coincide con la que aparece en
+	   el POM.xml, la modificamos en el PON.xml
+	   
+	b) La otra opcion es decargargar la version que neesitamos
+	   desde el IDE de Intellij haciendo lo siguiente:
+	   i) File > Project Structure > Project Settings > Project
+	   II) Y desde ahi descargamos la version que necesitamos.
+	   
+2. 
