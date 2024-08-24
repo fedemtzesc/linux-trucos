@@ -8,5 +8,6 @@
 	   i) File > Project Structure > Project Settings > Project
 	   II) Y desde ahi descargamos la version que necesitamos.
 	   
-2. This fuser 8080/tcp will print you PID of process bound on that port.
-	And this fuser -k 8080/tcp will kill that process.
+2. Localizacion de puerto en uso para matarlo:
+   This fuser 8080/tcp will print you PID of process bound on that port.
+   And this fuser -k 8080/tcp will kill that process.
