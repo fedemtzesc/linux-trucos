@@ -77,6 +77,10 @@
     f) OJO: Los programas que estan dentro del path /usr/bin no requiere estar definida su ruta dentro
         de la variable PATH por que se encuentran y se ejecutan en automatico por Linux
 
-
+11. Truco de comando para crear un USB booteable con una imagen ISO:\
+    a) Primero buscamos el disco montado en el que queremos crear el booteable con este comando:
+        sudo fdisk -l
+    b) Una vez localizado y ya teniendo el ISO listo ejecutamos este comando:
+        dd bs=4M if=/home/usuario/Nombre.iso of=/dev/sdx && sync
 
 
