@@ -11,3 +11,21 @@
 2. Localizacion de puerto en uso para matarlo:
    This fuser 8080/tcp will print you PID of process bound on that port.
    And this fuser -k 8080/tcp will kill that process.
+
+3. Usar un archivo *.jar externo en Intellij:
+
+	Creamos la carpeta libs debajo del proyecto. Directamente debajo.
+	
+	Copias o pones tu biblioteca externa *.jar dentro de esa nueva carpeta libs
+	
+	Abres el archivo pom.xml y colocas una nueva dependencia con la siguiente sintaxis:
+	
+	Nombre del jar : ReleaseVersion.jar
+	
+	    <dependency>
+	        <groupId>ReleaseVersion</groupId>
+	        <artifactId>ReleaseVersion</artifactId>
+	        <scope>system</scope>
+	        <version>1.0</version>
+	        <systemPath>${basedir}/libs/ReleaseVersion.jar</systemPath>
+	    </dependency>
