@@ -85,4 +85,7 @@
         o esta otra opcion si quiero ver el progreso de avance:
             dd bs=4M status=progress if=/home/usuario/Nombre.iso of=/dev/sdx && sync
 
-
+12. Buscar archivos que contengan cierto texto:
+    Nos colocamos un nivel arriba del directorio en donde vamos a buscar hacia abajo y de 
+    manera recursiva y luego tecleamos: 
+        grep -Rsn "editor.tokenColorCustomizations"
