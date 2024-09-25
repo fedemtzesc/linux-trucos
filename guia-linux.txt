@@ -89,3 +89,17 @@
     Nos colocamos un nivel arriba del directorio en donde vamos a buscar hacia abajo y de 
     manera recursiva y luego tecleamos: 
         grep -Rsn "editor.tokenColorCustomizations"
+
+13. Codigos Unicode para vocales acentuadas y las eñes:
+    \u00e1 = á
+    \u00e9 = é
+    \u00ed = í
+    \u00f3 = ó
+    \u00fa = ú
+    \u00c1 = Á
+    \u00c9 = É
+    \u00cd = Í
+    \u00d3 = Ó
+    \u00da = Ú
+    \u00f1 = ñ
+    \u00d1 = Ñ
