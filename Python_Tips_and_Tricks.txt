@@ -1,0 +1,9 @@
+1. Creacion de un Entorno Virtual con Python:
+  a) Ir a la carpeta de nuestro proyecto
+  b) Teclear el siguiente comando para crear el Entorno Virtual con nuestro nombre personalizado:
+      python -m venv nombre_venv
+  c) Y para activar nuestro nuevo Entorno Virtual de nuestro Proyecto tecleamos el siguiente comando:
+      source venv/bin/activate
+  d) Una vez activado, podemos usar el comando "pip install" para agregar las librerias que ocupamos.
+  e) Finalmente para cerrar o desactivar nuestro entorno virtual usamos el comando:
+      deactivate
