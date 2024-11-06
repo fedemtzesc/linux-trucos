@@ -103,3 +103,7 @@
     \u00da = Ú
     \u00f1 = ñ
     \u00d1 = Ñ
+
+14. Crear directorios anidados:
+    mkdir -p a/b/c/d/e/f/g...
+
