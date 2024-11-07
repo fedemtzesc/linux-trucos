@@ -43,4 +43,13 @@ PASOS PARA CAMBIAR EL PUERTO DE ESCUCHA DE NUESTRO SERVIDOR TOMCAT
       al final para que haga match con el ejemplo del cambio de puerto donde ahora es 
       7070, como convension para tener consistencia o una regla para cambiar los puertos.
       
-      
+PASOS PARA CONFIGURAR LOS USUARIOS DE NUESTRO SERVIDOR TOMCAT
+  1. Ir a la carpeta de instalacion de tomcat
+  2. Ir a la carpeta conf
+  3. Editar el archivo tomcat-users.xml
+  4. Un renglon antes del cierre de tag final y despues del tag comentado pegar lo siguiente:
+          <role rolename="admin-gui"/>
+          <role rolename="manager-gui"/>
+          <user username="fdxsoft" password="calibre3006" roles="manager-gui,admin-gui"/>
+     Ya solamente modificamos el username y el password en el tag de <user> final
+
