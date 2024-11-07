@@ -107,3 +107,9 @@
 14. Crear directorios anidados:
     mkdir -p a/b/c/d/e/f/g...
 
+15. Crear un usuario nuevo con su propio directorio:
+        sudo useradd -m -d /home/new_user_dir new_user                                                                       
+
+16. Eliminar un usuario junto con su directorio:
+        sudo userdel -r user_to_delete                                                                                       
+
