@@ -1,0 +1,31 @@
+PASOS PARA INSTALAR Y ARRANCAR NUESTRO SERVIDOR DE TOMCAT
+
+  1. Descargar el tomcat en formato zip
+  2. Descomprimirlo y copiarlo a la carpeta que ocupemos
+  3. Para ejecutar el servidor tomcat:
+      a) Tenemos que ir a la carpeta que decomprimimos de tomcat
+      b) Estando dentro de la carpeta tomcat ir a la carpeta bin
+      c) Estando en la carpeta bin ejecutamos el siguiente comando:
+          sh catalina.sh run
+         Esto hara que se ejecute el servidor de tomcat en el puerto 8080
+      d) Finalmente para probar que nuestro servidor de tomcat este trabajando
+         abrimos un navegador y tecleamos el siguiente URL:
+          localhost:8080
+
+PASOS PARA CAMBIAR EL PUERTO DE ESCUCHA DE NUESTRO SERVIDOR TOMCAT
+  1. Nos vamos al directorio donde tenemos instalado el tomcat
+  2. Nos metemos en el directorio conf
+  3. Abrimos en modo edicion el arcchivo server.xml
+  4. Buscamos el dato 8080
+  5. Una vez encontrado el dato, lo cambiamos por el numero de puerto en el 
+     cual queremos que se ejecute ahora nuestro servidor de tomcat
+  6. Una vez editado guardamos el archivo
+  7. Nos vamos a la carpeta de instalacion de tomcat nuevamente subiendo un nivel
+  8. Ahora nos vamos a la carpeta bin
+  9. Tecleamos el siguiente comando para detener el tomcat:
+      sh catalina.sh stop
+  10. Finalmente volvemos a arrancar el servidor de tomcat con el siguiente comando:
+      sh catalina.sh run
+      Para probar nuevamente que funcione en el nuevo puerto arbimos un navegador y
+      le ponemos el siguiente URL: localhost:3000 (para el caso en que el nuevo puerto
+      sea ahora el puerto (3000)
