@@ -1,0 +1,8 @@
+1.  Falla en kali que no se muestran los marcos de las ventanas, para maximizar, minimizar, est y no muestra iconos del escritorio
+    se resuelve con los siguientes comandos:
+    
+    sudo rm -rf .cache/xfce4                                                                                     
+    sudo rm -rf .config/xfce4                                                                                    
+    sudo rm -Rv ~/.cache/sessions/                                                                               
+
+    NOTA: esto solo resuelve el problema de forma temporal al parecer
