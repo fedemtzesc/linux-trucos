@@ -1,0 +1,38 @@
+1. Para instalar el servidor y las herramientas como mongosh es mejor instalarlos desde la pagina de mongodb.com
+
+2. Comando para revisar la version de mongodb que tengo instalada
+      mongod --version
+
+3. Comando para revisar la version de mongosh que tengo instalada
+      mongosh --version
+
+4. Para entrar al area de trabajo de mongodb y poder trabajar tecleamos en la terminal
+      mongosh
+
+5. Una vez que estamos dentro nos aparecera el siguiente prompt: test>
+   Para poder ver las bases de datos que estan en nuestro server teclemaos el comando
+      show dbs
+
+6. Para crear una nueva base de datos tecleamos el comando:
+      use nombre_nueva_bd
+    NOTA: Si tecleamos show bds no nos aparecera, esto es por que aun no tiene creada al menos una coleccion
+
+7. Para crear una coleccion en nuestra nueva BD tecleamos el siguiente comando:
+      db.createCollection("nombre_nueva_collection")
+
+8. Para cambiarnos de base de datos se usa el mismo comando que en las demas BD's relacionales:
+      use nombre_db_a_la_cual_me_quiero_cambiar
+
+9. Eliminar una base de datos, para esto se ejecuta el comando:
+      db.dropDatabase()  #Estando posicionados en la BD que queremos eliminar
+   OJO: Esta operacion es muy delicada y muy riesgosa, asi que hay que tener mucho cuidado antes de eliminarla.
+
+10. Comando para mostrar las colecciones de la BD en la que estamos localizados:
+      show collections
+
+11. Comando para insertar un documento en una collection:
+      db.nombre_documento.insertOne({datos:"en",formato:"JSON"})
+      ejemplo:
+        db.post.insertOne({nombre:"Federico",fecha:"Abril 22",descripcion:"Hola a todos"})
+
+12.
