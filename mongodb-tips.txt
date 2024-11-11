@@ -35,4 +35,68 @@
       ejemplo:
         db.post.insertOne({nombre:"Federico",fecha:"Abril 22",descripcion:"Hola a todos"})
 
-12.
+12. Insertar distintos documentos en una collection:
+      db.nombre_documento.insertMany({datos:"en",formato:"JSON"},{datos:"en",formato:"JSON"}, . . . , {datos:"en",formato:"JSON"})
+      ejemplo:
+        db.post.insertMany([{nombre:"Agustin",fecha:"Octubre 27",descripcion:"Hoy en mi cumple"}, {nombre:"Jessica",fecha:"Diciembre 23",decripcion:"Hoy es mi cumple"}])
+
+13. Como mostrar los documentos que tiene una coleccion:
+      a) Para ver todos los documentos sin filtros:
+            db.nombre_colleccion.find()
+      b) Para ver un registro usando un filtro sencillo
+            db.nombre_colleccion.find({nombre:"Federico"})
+      c) Usando el operador $eq en el siguiente ejemplo:
+            db.post.find({nombre:{$eq:"Valeria"}})
+      c) Usando el operador $lt (menor que):
+            db.post.find({like:{$gt:200}})
+         el cual me devolveria como resultado:
+            [
+              {
+                _id: ObjectId('67317e2a056f181ba5c1c193'),
+                nombre: 'Sebastian',
+                fecha: 'Noviembre 24',
+                descripcion: 'Fecha de mi cumple',
+                like: 100
+              }
+            ]
+      d) Usando el operador $gt (mayor que):
+            db.post.find({like:{$gt:200}})
+         el cual no me devolveria NADA por que la collection no contiene registros que cumplan
+      e) Usando el operador $ne (not equal)
+            db.post.find({nombre:{$ne:"Federico"}})
+      f) Usando el operador $nin (not in):
+            db.post.find({nombre:{$nin:["Agustin","Jessica","Sebastian","Agapito"]}})
+      g) Usando el operador $in (in):
+            db.post.find({nombre:{$in:["Agustin","Jessica","Sebastian","Agapito","Juancho"]}})
+      h) Usando operador logico $and con $eq:
+            db.post.find({$and:[{nombre:"Federico"},{fecha:"Abril 22"}]})
+      i) Usando el operador logico $or y $eq:
+            db.post.find({$or:[{nombre:"Federico"},{like:{$eq:100}}]})
+      j) Usando operador logico $not
+            db.post.find({like:{$not:{$eq:100}}})
+
+14. Comando para eliminar un registro:
+      db.post.deleteOne({nombre:"Sebastian"})
+
+15. Comando para eliminar mas de un regfistro:
+      db.post.deleteMany({nombre:{$in:["Agustin","Jessica"]}})
+
+16 Actualizar un documento usando el comando updateOne()
+      db.post.updateOne({nombre:"Agapito"},{$set:{nombre:"Federico",fecha:"Julio 13"}})
+
+17. Actualizar mas de un documento al mismo tiempo con updateMany():
+      db.post.updateMany({nombre:{$in:["Federico","Alicia"]}},{$set:{fecha:"Enero 31"}})
+
+18. Mostrar los campos de un documento:
+      a) Si deseamos ver los campos indicados:
+            db.post.find({},{nombre:1,fecha:1})
+      b) Si deseamos que no se muestre el _id hacemos lo siguiente:
+            db.post.find({},{nombre:1,fecha:1,_id:0})
+      *** NOTA: Como podemos observar, mostramos el campo en funcion de una bandera de encendido:1 y apagado:0
+19. Mostrar los campos de manera ordenada ascendente y descendente:
+      a) Si queremos ver la lista de manera ascendente por un campo llamado nombre:
+            db.post.find({},{nombre:1,fecha:1,_id:0}).sort({nombre:1})
+         La bandera 1 indica que el orden del campo es ascendente
+      b) Si queremos ver la lista de manera descendente por un campo llamado nombre:
+            db.post.find({},{nombre:1,fecha:1,_id:0}).sort({nombre:-1})
+      *** NOTA: Como podemos observar, cambiamos el orden en funcion de una bandera de ascendente:1 y descendente:-1
