@@ -1,0 +1,9 @@
+1. Para visualizar imagenes de codigos QR o codigo de barras usamos la siguiente biblioteca:
+      sudo apt install zbar-tools
+  Despues ejecutamos el siguiente comando para poder mostrar el contenido en texto del codigo:
+      zbarimg qr.jpeg 
+  esta seria la salida del ejemplo de arriba:
+      QR-Code:https://www.youtube.com/watch?v=uaRN0Px2b_k
+
+2. 
+
