@@ -1,0 +1,5 @@
+1. Comandos shell para actualizar nodejs y npm a su mas ultima version:
+    sudo apt install npm nodejs
+    sudo npm install -g n
+    sudo n install latest
+    sudo npm install -g npm
