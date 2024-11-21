@@ -7,3 +7,18 @@
   d) Una vez activado, podemos usar el comando "pip install" para agregar las librerias que ocupamos.
   e) Finalmente para cerrar o desactivar nuestro entorno virtual usamos el comando:
       deactivate
+
+2. Instalar cualquier version de Python en mi equipo:
+  Los paso son los siguientes:
+
+      sudo apt-get install libssl-dev openssl
+      wget https://www.python.org/ftp/python/3.5.0/Python-3.5.0.tgz
+      tar xzvf Python-3.5.0.tgz
+      cd Python-3.5.0
+      ./configure
+      make
+      sudo make install
+      
+  Para checar si la version se instalo correctametne teclear python3.5 y si no, teclear lo siguiente:
+      
+      sudo ln -fs /opt/Python-3.5.0/Python /usr/bin/python3.5
