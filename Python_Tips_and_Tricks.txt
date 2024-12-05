@@ -22,3 +22,7 @@
   Para checar si la version se instalo correctametne teclear python3.5 y si no, teclear lo siguiente:
       
       sudo ln -fs /opt/Python-3.5.0/Python /usr/bin/python3.5
+
+3. Eliminar Anaconda:
+  You can undo this by running `conda init --reverse $SHELL`? [yes|no]
+
