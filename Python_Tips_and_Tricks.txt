@@ -26,3 +26,6 @@
 3. Eliminar Anaconda:
   You can undo this by running `conda init --reverse $SHELL`? [yes|no]
 
+4. Revisar toda la informacion de tu sistema Linux instalado:
+    lsb_release -a
+
