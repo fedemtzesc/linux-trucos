@@ -1,6 +1,6 @@
-Banderas para usar al crear expresiones regulares:
+1. Banderas para usar al crear expresiones regulares:
     Las Banderas son propiedades especiales que aumentan dramáticamente las habilidades de tu expresión regular.
-y existen solo 3 que son compartidos a lo largo de todas los navegadores hasta el momento.
+    y existen solo 3 que son compartidos a lo largo de todas los navegadores hasta el momento.
 
     la / /g que significa global, sin esta bandera se parara la coincidencia a la primera que encuentra, por eso se la colocamos para identificar todas las coincidencias dentro de un String.
     Ejemplos:
@@ -14,6 +14,32 @@ y existen solo 3 que son compartidos a lo largo de todas los navegadores hasta e
         let myRegex3 = /expresion_regular/i
     la / /m que significa multilínea, que buscara cuando tienes líneas de espacio entre texto, sin esta bandera se para la búsqueda, efectivo cuando tengas \n en un String de 
     Ejemplos: 
-        let myRegex1 = new RegEx(/expresion_regular/,"g");
-        let myRegex2 = new RegEx("expresion_regular","g");
-        let myRegex3 = /expresion_regular/g
+        let myRegex1 = new RegEx(/expresion_regular/,"m");
+        let myRegex2 = new RegEx("expresion_regular","m");
+        let myRegex3 = /expresion_regular/m
+
+2. Clases de Letras.- Estas fueron creadas para coincidir con algun tipo de caracter o incluso con todos los caracteres como el punto (.) que, como un comodin, indica todos los caracteres alfanumericos, y con el unico que no coincide es entre un espacio entre un parrafo y otro.
+    \w    Busca una sola ocurrencia de un caracter del abecedario (en mayusculas o minusculas) y el guion bajo (Se pone una por cada ocurrencia que se desee buscar)
+    \W    Busca todo lo contrario a lo que busca \w
+    \s    Busca todo lo que sea un espacio dentro de un string
+    \S    Busca todo lo que NO sea un espacio dentro de un string
+    \d    Busca un caracter de numero dentro de un string
+    \D    Busca lo contrario a \d, i.e., todo lo que NO sea un numero dentro del string
+
+3. Cuantificadores.- Se encargan de dar un valor a la cantidad de veces que se quiere coincidir con un patron. 
+    {x,y}    Sirve para establecer la cantidad de veces que se requiere que se repita un patron
+                ejemplo:
+                /a{2,3}/g    Significa que la 'a' tiene que estar contenida en la cadena de 2 a 3 veces
+    ?        Establece que no importa que caracter venga a continuacion
+    +        Repeticion de 1 o mas veces
+    *        Repeticion de 0 o mas veces 
+
+4. Literales para buscar caracteres escapados:
+    \n        Sirve para buscar un salto de linea
+    \t        Busca un tabulador
+    \u000     Busca un caracter por medio de su codigo unicode
+    
+    
+        
+        
+    
