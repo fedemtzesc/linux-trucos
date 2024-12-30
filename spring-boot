@@ -1,27 +1,27 @@
   	PASOS PARA LA CREACIÓN DE UN SERVICIO REST
-1.-	  Creamos un paquete llamado models
-2.-	  Y dentro creamos la clase principal que representa el modelo de datos y se mapea a una tabla en la BD: NombreEntidadModel
-3.-	  Creamos un paquete llamado response
-4.-	  Y dentro de este creamos la clase llamada MetadataResponse con un único campo del tipo ArrayList<HashMap<String,String>> y modificamos
-      el método set que crea un HashMap con los parámetros formales que necesitemos mostrar en cada respuesta de servicio. Esta clase tendra que ser 
-      extendida en cada una de las clases del tipo NombreEntidadResponseRest
-5.-	  Ademas creamos otra clase llamada NombreEntidadResponse con un único campo List<NombreEntidadModelo> con sus correspondientes métodos de 
-      acceso. Esta clase tendra que ser implementada como un campo unico de cada clase NombreEntidadRestResponse
-6.-	  Y finalmente creamos una ultima clase llamada NombreEntidadResponseRest que heredara de MetadataResponse y que tendrá un unico campo del 
-      tipo NombreEntidadResponse con sus correspondientes metodos de acceso.
-7.-	  Ahora creamos un paquete llamado services dentro del paquete principal
-8.-	  Y debajo de este nuevo paquete creamos una Interfase llamada INombreEntidadService  y dentro de esta interfase definimos todos los métodos
-      que llevaran las clases que lo implementen para DI.
-9.-	  Adicional a lo anterior, creamos una nueva clase llamada NombreEntidadServiceImpl que implementara a INombreEntidadService y los métodos que
-      tiene definidos y la decoramos con @Service
-10.-	Ahora creamos un paquete llamado dao el cual coontendra todas las interfaces de spring boot para acceso a las bases de datos u otros datos 
-      de persistencia.
-11.-	Y dentro de este paquete creamos una interfase llamada INombreEntidadDao la cual extenderá de la interfase CrudRepository
-12.-	Ahora nos pasamos nuevamente al paquete services a la clase NombreEntidadServiceImpl y declaramos una instancia del tipo INombreEntidadDao con 
-      @Autowired para poder usar sus metodos de acceso a los datos de la BD, y asi pode implementar cada uno de los metodos definidos en la clase 
-      que implementa llamada INombreEntidadService
-13.-	Ahora, para poder exponer los servicios hacia afuera tenemos que crear una paquete que contenga todos los controladores de nuestro proyecto 
-      el cual obviamente se llamada controllers.
+1.- Creamos un paquete llamado models
+2.-	Y dentro creamos la clase principal que representa el modelo de datos y se mapea a una tabla en la BD: NombreEntidadModel
+3.-	Creamos un paquete llamado response
+4.-	Y dentro de este creamos la clase llamada MetadataResponse con un único campo del tipo ArrayList<HashMap<String,String>> y modificamos
+    el método set que crea un HashMap con los parámetros formales que necesitemos mostrar en cada respuesta de servicio. Esta clase tendra que ser 
+    extendida en cada una de las clases del tipo NombreEntidadResponseRest
+5.-	Ademas creamos otra clase llamada NombreEntidadResponse con un único campo List<NombreEntidadModelo> con sus correspondientes métodos de 
+    acceso. Esta clase tendra que ser implementada como un campo unico de cada clase NombreEntidadRestResponse
+6.-	Y finalmente creamos una ultima clase llamada NombreEntidadResponseRest que heredara de MetadataResponse y que tendrá un unico campo del 
+    tipo NombreEntidadResponse con sus correspondientes metodos de acceso.
+7.-	Ahora creamos un paquete llamado services dentro del paquete principal
+8.-	Y debajo de este nuevo paquete creamos una Interfase llamada INombreEntidadService  y dentro de esta interfase definimos todos los métodos
+    que llevaran las clases que lo implementen para DI.
+9.-	Adicional a lo anterior, creamos una nueva clase llamada NombreEntidadServiceImpl que implementara a INombreEntidadService y los métodos que
+    tiene definidos y la decoramos con @Service
+10.- Ahora creamos un paquete llamado dao el cual coontendra todas las interfaces de spring boot para acceso a las bases de datos u otros datos 
+     de persistencia.
+11.- Y dentro de este paquete creamos una interfase llamada INombreEntidadDao la cual extenderá de la interfase CrudRepository
+12.- Ahora nos pasamos nuevamente al paquete services a la clase NombreEntidadServiceImpl y declaramos una instancia del tipo INombreEntidadDao con 
+     @Autowired para poder usar sus metodos de acceso a los datos de la BD, y asi pode implementar cada uno de los metodos definidos en la clase 
+     que implementa llamada INombreEntidadService
+13.- Ahora, para poder exponer los servicios hacia afuera tenemos que crear una paquete que contenga todos los controladores de nuestro proyecto 
+     el cual obviamente se llamada controllers.
 14.-	Y dentro de este creamos un control por cada entidad creada con el siguiente nombre NombreEntidadController, y dentro de este definimos las 
       rutas de acceso principal y una especifica por cada metodo que representa cada uno de los servicios que tendra expuestos.
 15.-	Después, decoramos nuestra clase NombreEntidadController con @RestController y con @RequestMapping(“/ruta/del/servicio/principal/v1”)
