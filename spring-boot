@@ -2,8 +2,8 @@
 1.-	  Creamos un paquete llamado models
 2.-	  Y dentro creamos la clase principal que representa el modelo de datos y se mapea a una tabla en la BD: NombreEntidadModel
 3.-	  Creamos un paquete llamado response
-4.-	  Y dentro de este creamos la clase llamada MetadataResponse con un único campo del tipo ArrayList<HashMap<String,String>> y 
-      un método set que crea un HashMap con los parámetros que necesitemos mostrar en cada respuesta de servicio. Esta clase tendra que ser 
+4.-	  Y dentro de este creamos la clase llamada MetadataResponse con un único campo del tipo ArrayList<HashMap<String,String>> y modificamos
+      el método set que crea un HashMap con los parámetros formales que necesitemos mostrar en cada respuesta de servicio. Esta clase tendra que ser 
       extendida en cada una de las clases del tipo NombreEntidadResponseRest
 5.-	  Ademas creamos otra clase llamada NombreEntidadResponse con un único campo List<NombreEntidadModelo> con sus correspondientes métodos de 
       acceso. Esta clase tendra que ser implementada como un campo unico de cada clase NombreEntidadRestResponse
@@ -35,4 +35,3 @@
       vi)   INombreEntidadService
       vii)  NombreEntidadServiceImpl
       viii) NombreEntidadController
-      
