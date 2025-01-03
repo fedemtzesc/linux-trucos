@@ -27,11 +27,11 @@
 15.- Después, decoramos nuestra clase NombreEntidadController con @RestController y con @RequestMapping(“/ruta/del/servicio/principal/v1”)
 16.- Y finalmente implementamos cada uno de los metodos definidos en el servicio creado llamado NombreEntidadServicio.
 17.- En resumen se crearan en total las siguientes clases e interfases:
-      i)    NombreEntidadModel
-      ii)   MetadataResponse
-      iii)  NombreEntidadResponse
-      iv)   NombreEntidadResponseRest
-      v)    INombreEntidadDao
-      vi)   INombreEntidadService
-      vii)  NombreEntidadServiceImpl
-      viii) NombreEntidadController
+      i)    NombreEntidadModel            *** Clase que se mapea con su correspondiente tabla en la BD
+      ii)   MetadataResponse              *** Solo se crea una unica vez para setear mensajes de respuesta en el API REST
+      iii)  NombreEntidadResponse         *** Clase que solo implementa un arrego de NombreEntidadModel
+      iv)   NombreEntidadResponseRest     *** Hereda de MetadataResponse e implementa NombreEntidadResponse
+      v)    INombreEntidadDao             *** Implementa la interfase CrudRepository para acceder a la BD o persistencias de datos
+      vi)   INombreEntidadService         *** Define los metodos que implementara NombreEntidadServiceImpl
+      vii)  NombreEntidadServiceImpl      *** Implementa los metodos definidos por INombreEntidadService y accesa a los datos usando los metodos de INombreEntidadDao
+      viii) NombreEntidadController       *** Expone los servicios o metodos implementados por NombreEntidadServiceImpl
