@@ -1,0 +1,6 @@
+1. Convertir un numero decimal en base 10 a un numero binario en base 2:
+    echo "obase=2;$num_base_10" | bc
+
+2. Convertir un numero deciman en base 10 a un numero hexadecimal en base 16
+    print '%x\n' $num_base_10
+    
