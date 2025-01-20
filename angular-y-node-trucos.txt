@@ -1,0 +1,11 @@
+1. Cambiar la version de Angular
+    npm install --global @angular/cli@X.X.X
+
+2. Cambiar la version de nodejs:
+    nvm install v16.13.1
+
+3. Comando para listar versiones de nodejs instaladas en mi equipo:
+    nvm lst
+
+4. Comando para cambiar de version a usar de nodejs:
+    nvm use vX.X.X
