@@ -19,3 +19,5 @@
 	npm cache clean --force
 	
 	*** NOTA: usando sudo
+7. Para crear un modulo en la raiz de la carpeta (bandera --flat):
+	ng g c modules/dashboard/pages/dashboard --flat
