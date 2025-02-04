@@ -12,3 +12,10 @@
 
 5. Comando para ver las versiones disponibles de angular para instalar:
     nvm ls-remote
+
+6. Para remover totalmente version de Angular actual:
+	npm uninstall -g @angular/cli
+	npm cache verify
+	npm cache clean --force
+	
+	*** NOTA: usando sudo
