@@ -9,3 +9,6 @@
 
 4. Comando para cambiar de version a usar de nodejs:
     nvm use vX.X.X
+
+5. Comando para ver las versiones disponibles de angular para instalar:
+    nvm ls-remote
