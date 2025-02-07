@@ -21,3 +21,6 @@
 	*** NOTA: usando sudo
 7. Para crear un modulo en la raiz de la carpeta (bandera --flat):
 	ng g c modules/dashboard/pages/dashboard --flat
+
+8. Comando para cambiar de manera permanente la version del nodejs que aparece con nvm current
+	nvm alias default 0.0.0  --> cambiar por la version deseada
