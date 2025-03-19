@@ -4,3 +4,5 @@
 2. Convertir un numero deciman en base 10 a un numero hexadecimal en base 16
     print '%x\n' $num_base_10
     
+3. Abrir el folder en donde nos encontramos desde el bash:
+    xdg-open .
