@@ -35,3 +35,33 @@
       vi)   INombreEntidadService         *** Define los metodos que implementara NombreEntidadServiceImpl
       vii)  NombreEntidadServiceImpl      *** Implementa los metodos definidos por INombreEntidadService y accesa a los datos usando los metodos de INombreEntidadDao
       viii) NombreEntidadController       *** Expone los servicios o metodos implementados por NombreEntidadServiceImpl
+18.- Cuales son los posibles valores para spring.jpa.hibernate.ddl-auto, y que finalidad tiene cada uno?
+  🔹 none
+     Descripción: No se realiza ninguna acción sobre el esquema.
+     Uso típico: Cuando tú mismo gestionas las migraciones (por ejemplo, con Flyway o Liquibase).
+
+  🔹 validate
+     Descripción: Valida que el esquema de la base de datos coincida con las entidades JPA.
+     No crea ni modifica tablas.
+     Uso típico: En producción, cuando quieres asegurarte de que el esquema está correcto pero no deseas que Hibernate lo toque.
+  
+  🔹 update
+     Descripción: Hibernate actualizará automáticamente el esquema para que coincida con las entidades JPA.
+     Puede agregar columnas o tablas, pero no elimina nada.
+     Uso típico: En desarrollo, para evitar hacer alteraciones manuales mientras desarrollas.
+  
+  🔹 create
+     Descripción: Elimina y vuelve a crear todo el esquema cada vez que la aplicación se reinicia.
+     ¡Se pierden todos los datos!
+     Uso típico: Para pruebas rápidas o en ambientes de desarrollo.
+  
+  🔹 create-drop
+     Descripción: Igual que create, pero además elimina el esquema al detener la aplicación.
+     Uso típico: Para tests automatizados o sesiones de desarrollo temporales.
+  
+  🔹 update vs validate vs none
+    
+  🔹 Entorno	Valor recomendado
+        Desarrollo	update o create-drop
+        Pruebas	create-drop
+        Producción	validate o none
