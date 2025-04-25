@@ -1,0 +1,3 @@
+1. Si manda error de conexion al ejecutar algun comando:
+    a) Editamos el siguiente archivo sudo nano logs/meta.properties 
+    b) Y comentariamos con # el parametro cluster.id
