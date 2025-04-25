@@ -1,3 +1,20 @@
 1. Si manda error de conexion al ejecutar algun comando:
     a) Editamos el siguiente archivo sudo nano logs/meta.properties 
     b) Y comentariamos con # el parametro cluster.id
+
+2. Comandos mas usuales para probar kafka:
+    a) Primeramente nos tenemos que ir a la carpeta en donde tenermos instalado kafka (ej: /opt/kafka)
+    b) Este comando es para crear un TOPIC:
+        sudo -u kafka /opt/kafka/bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --topic FDXSOFT_TOPIC
+    c) Este comando es para listar un TOPIC: 
+        sudo -u kafka /opt/kafka/bin/kafka-topics.sh --list --bootstrap-server localhost:9092 --topic FDXSOFT_TOPIC
+    d) Este comando lista todos los TOPIC registrados:
+        sudo -u kafka /opt/kafka/bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+    e) Este comando describe el token indicado: 
+        sudo -u kafka /opt/kafka/bin/kafka-topics.sh --describe --bootstrap-server localhost:9092 --topic FDXSOFT_TOPIC
+    f) Este comando crea un PRODUCER del TOPIC:
+        sudo -u kafka /opt/kafka/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic FDXSOFT_TOPIC
+    g) Este comando crea un CONSUMER del TOPIC:
+        sudo -u kafka /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic FDXSOFT_TOPIC --from-beginning
+
+3. 
