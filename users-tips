@@ -1,0 +1,2 @@
+1. Comando para dar de alta usuario y que no necesite login en Linux:
+    useradd -r -d /opt/kafka -s /usr/sbin/nologin kafka
