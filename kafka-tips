@@ -17,4 +17,10 @@
     g) Este comando crea un CONSUMER del TOPIC:
         sudo -u kafka /opt/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic FDXSOFT_TOPIC --from-beginning
 
-3. 
+3. NO LE PUEDO LLEGAR AL SERVIDOR DE KAFKA: Para poder accesar el servicio remotamente se tiene que hacer lo siguiente:
+    a) abrir para modificar el archivo de configuraciones de kafka:
+        sudo nano /opt/kafka/config/server.properties
+    b) Despues buscamos los dos parametros que vienen a continuacion y dejarlos asi a parecen a continuacion:
+            listeners=PLAINTEXT://:9092
+            advertised.listeners=PLAINTEXT://fdxsoft.com:9092
+
