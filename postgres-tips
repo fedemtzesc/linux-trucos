@@ -1,0 +1,24 @@
+1. Como instalar postgressql en linux:
+      sudo apt-get install postgresql postgresql-contrib
+      
+      *** NOTA: cuando instalamos esta bd nos da un usuario por default llamado postgres
+      
+2. Comando para revisar que se instalo bien el postgresql ejecutamos:
+      sudo systemctl status postgresql.service
+
+3. Para poder entrar a la base de datos por primera vez usamos este comando:
+      sudo -u postgres psql
+
+      *** NOTA: inicialmente el usuario postgres biene con contraseña vacia.
+
+4. Para establecerle la contraseña a nuestro usuario postgres entramos a la bd como en paso 3,
+   y luego, ejecutamos el siguiente comando:
+       alter user postgres with password 'nueva.contraseña';
+
+       *** NOTA no olvidar poner el punto y coma al final de la instruccion sql.
+
+5. Para crear un usuario nuevo entramos a la bd como en el paso 3 u luego ejecutamos:
+      CREATE USER nuevo_usuario WITH PASSWORD 'nueva.contraseña';
+
+      
+      
