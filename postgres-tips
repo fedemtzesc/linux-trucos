@@ -34,8 +34,8 @@
       c) Ahora si procedemos a instalar PGAdmin4:
             sudo apt install pgadmin4
 
-
-
+8. Comando para conectarse al servidor de Postgresql desde la consola y remotamente tambien:
+            psql -h 127.0.0.1 -p 5432 -U postgres -W
 
 
       
