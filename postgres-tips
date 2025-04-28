@@ -20,5 +20,23 @@
 5. Para crear un usuario nuevo entramos a la bd como en el paso 3 u luego ejecutamos:
       CREATE USER nuevo_usuario WITH PASSWORD 'nueva.contraseña';
 
+6. Otorgar privilegios de superusuario a un usuario comun y corriente, permitiéndole realizar 
+   operaciones avanzadas y administrativas en la base de datos. Usamos este comando:
+      ALTER USER usuario_simple WITH SUPERUSER;
+
+7. Comandos para instalar PGAdmin4:
+      a) Este comando descarga y añade la llave GPG del repositorio de PgAdmin, asegurando que 
+         los paquetes instalados desde el repositorio son seguros y confiables:
+            sudo curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add -
+      b) Este comando agrega el repositorio oficial de PgAdmin a tu lista de fuentes de software. 
+         El repositorio contiene los paquetes necesarios para instalar PgAdmin:
+            sudo sh -c '. /etc/upstream-release/lsb-release && echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$DISTRIB_CODENAME pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+      c) Ahora si procedemos a instalar PGAdmin4:
+            sudo apt install pgadmin4
+
+
+
+
+
       
       
