@@ -20,3 +20,8 @@
             chsh -s /bin/bash
             o
             chsh -s /bin/zsh
+
+6. Comandos para switchearse entre tipos de bash's
+    a) exec bash
+    b) exec zsh
+
