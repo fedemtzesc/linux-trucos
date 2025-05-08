@@ -12,3 +12,11 @@
    con espacio, y que la salida la copie en el clipboard.
         shuf -i 1-10 -r -n 20 | tr '\n' ', ' | xclip -selection clipboard
     
+5. Cambiar de shell en Linux:
+    a) Revisamos que shell tiene nuestro usuario primero en el aarchivo de usuarios:
+        cat /etc/passwd | grep nombre_user
+    b) Despues para cambiar de shell podemos usar cualquiera de los dos comandos que
+        vienen a continuacion de acuerdo a nuestras necesidades:
+            chsh -s /bin/bash
+            o
+            chsh -s /bin/zsh
