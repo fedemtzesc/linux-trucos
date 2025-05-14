@@ -1,0 +1,5 @@
+1. Transferir las tablas de una base de datos local a una remota:
+  a) Primeramente creamos la base de datos receptora en la maquina remota:
+      mysqladmin -h 'fdxsoft.com' create jpa_relations_db -u root -p
+  b) Luego definimos las tablas que vamos a pasar a la BD remota y con este comando las enviamos:
+      mysqldump -u root --single-transaction --order-by-primary jpa_relations_db tabla1 tabla2 tablaN -pAhMesAmies.3006.1020 | mysql -u root -pAhMesAmies.3006.1020 --port=3306 --host=fdxsoft.com jpa_relations_db
