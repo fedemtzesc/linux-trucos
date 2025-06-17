@@ -71,4 +71,8 @@
   @Query(value="SELECT * FROM personas WHERE id>20" nativeQuery=true)
   List<Persona> findAllPersonas()
 
+20. @Query con JPQL (Java Persistence Query Language)
+  Ejemplo:
+  @Query(value="SELECT p FROM Persona p")
+  List<Persona> findAllPersonas()
 
