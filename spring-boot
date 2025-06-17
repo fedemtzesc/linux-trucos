@@ -65,3 +65,10 @@
         Desarrollo	update o create-drop
         Pruebas	create-drop
         Producción	validate o none
+
+19. @Query nativa (con SQL)
+  Ejemplo:
+  @Query(value="SELECT * FROM personas WHERE id>20" nativeQuery=true)
+  List<Persona> findAllPersonas()
+
+
