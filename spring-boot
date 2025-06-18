@@ -73,6 +73,6 @@
 
 20. @Query con JPQL (Java Persistence Query Language)
   Ejemplo:
-  @Query(value="SELECT p FROM Persona p")
-  List<Persona> findAllPersonas()
+  @Query(value="SELECT p FROM Persona p WHERE p.nombre LIKE %:filter%")
+  List<Persona> findAllPersonas(@Param("filter") String filter)
 
