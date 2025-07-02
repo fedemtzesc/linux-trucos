@@ -1,0 +1,102 @@
+* Requerimientos = Necesidades o carencias que necesita un cliente que haga su aplicacion deseada.
+
+* Requerimientos Funcionales:
+    - Es el QUE HACE el Sistema de SW
+    - Son las tareas o funcionalidaes que el SW debe cumplir para que el usuario logre sus objetivos.
+    - Lo que permite utilizar la aplicacion de manera comoda y visual
+    - Interactuan con el Usuario de manera directa.
+    
+* Requerimientos NO Funcionales:
+    - Es el COMO LO HACE el Sistema de SW
+    - Son como las reglas del juego para asegurar que la aplicacion sea rapida, segura, escalable y facil de usar.
+    - Definen las caracteristicas de CALIDAD del SW
+    - No se enfocan en que es lo que hace el sistema, sino en como lo hace. Como:
+    	- Velicidad. Ejemplo:  El sistema debe de responder en menos de 2 segundos al buscar un producto...
+    	- Seguridad. Ejemplo: Las contraseñas de los usuarios deben de estar encriptadas en la BD.
+    	- Compatibilidad. Ejemplo: El sistema tiene que ser compatible con Celulares, Tablets y PC's
+    - Es lo que se encarga que la aplicacion cumple con lo que tiene que hacer.
+    - No se puede ver ni tocar, no interactuan con el usuario directamente.
+
+🤖️️ 🕵 📖 🎓 Conocimientos y Herramientas necesarias para ser Arquitecto de Software 🤖️️ 🕵 📖 🎓
+
+✅ Aprende las bases -  dentro de lo que ya haces...
+✅ Front End - CSR / SSR / SSG / JAM / ROCA / Universal Rendering / SPA
+✅ Arquitecturas en Comun - Stream Architecture / Clean Architecture / Hexagonal Architecture
+✅ Aprender de System Design
+✅ Investigar siempre el por que de las cosas... (por que se hace asi, o asa?...)
+✅ Diferencias y usos de:
+    - Monolito vs Microservicios vs Serverless.
+    - Arquitectura Hexagonal, Clean Architecture, Onion, DDD (Domain-Driven Design).
+    - Saber cuándo conviene desacoplar, separar capas, o distribuir servicios.
+    - Experiencia con REST APIs, GraphQL, WebSockets.
+✅ Tecnologías y stack moderno (pero con criterio)
+    - Buen dominio de al menos un stack backend completo (Java/Spring, .NET, Node.js, etc.).
+    - Experiencia real con bases de datos relacionales y NoSQL (ej. PostgreSQL, MongoDB, Redis).
+    - Conocimiento práctico de contenedores y orquestadores (Docker, Kubernetes).
+    - Fundamentos de CI/CD (Git, pipelines, testing automatizado, integración continua).
+    - Saber cómo desplegar, monitorear y escalar servicios.
+✅ Frontend y experiencia de usuario (nivel arquitecto)
+    - Saber cómo se estructura un frontend moderno (React, Angular, Vue), aunque no seas frontend.
+    - Entender qué implica una SPA vs SSR vs SSG.
+    - Saber comunicarte con equipos frontend para que el diseño de APIs sea eficiente y limpio.
+✅ Soft skills y visión de negocio
+    - Capacidad para comunicar ideas técnicas a perfiles no técnicos.
+    - Habilidad para tomar decisiones bajo incertidumbre.
+    - Pensamiento estratégico: entender qué parte del sistema es crítica para el negocio y cuál no.
+    - Capacidad de liderar técnicamente sin ser dictador: guiar sin microgestionar.
+
+✅ Comprensión de event-driven architecture (mensajería, colas, pub/sub).
+
+✅ Herramientas clave y reales que los arquitectos suelen usar hoy (2025), especialmente para ser más rápidos, claros y eficientes:
+    🧱 1. Modelado, diseño y documentación
+        ✅ Herramientas visuales
+            Draw.io / diagrams.net → Gratis, versátil, para diagramas UML, flujos, infra, etc.
+            Lucidchart → Más profesional, colaborativo, integra con Google/Microsoft.
+            PlantUML → Para generar diagramas desde texto (ideal para versionar en Git).
+            C4 Model + Structurizr → Modelo moderno de arquitectura de software (Sistema → Contenedor → Componente → Código).
+
+        ✅ Documentación técnica
+            Markdown + Git (README, /docs) → Para documentar arquitectura viva dentro del repositorio.
+            Asciidoc / Asciidoctor → Alternativa a Markdown para documentación más profesional.
+            Docusaurus → Sitios web de documentación basados en React y Markdown.
+
+    ⚙️ 2. Evaluación de arquitectura y decisiones
+        ✅ Modelado y evaluación de decisiones (ADR)
+            Architectural Decision Records (ADR) → Registros simples de decisiones técnicas importantes.
+            Ejemplo: adr/0001-usar-microservicios.md
+
+        ✅ Checklists y guías
+            ThoughtWorks Tech Radar → Para estar al día sobre tecnologías, técnicas y herramientas emergentes.
+            The 12-Factor App → Para evaluar diseño de apps modernas (especialmente para la nube).
+
+    🚀 3. DevOps, infraestructura y despliegue
+            Docker → Contenerización de apps, base de toda arquitectura moderna.
+            Kubernetes (K8s) → Orquestación y despliegue de microservicios a gran escala.
+            Terraform / Pulumi → Infraestructura como código (IaC).
+            GitHub Actions / GitLab CI / Jenkins → Automatización de pruebas, builds, despliegues.
+            Ansible / Chef / Puppet → Gestión de configuración (menos común ahora con containers).
+
+    🧪 4. Análisis de rendimiento, calidad y métricas
+            SonarQube → Análisis estático del código, deuda técnica, seguridad.
+            New Relic / Datadog / Prometheus + Grafana → Monitoreo en tiempo real de servicios, bases de datos, etc.
+            JMeter / k6 → Pruebas de carga y estrés.
+
+    📦 5. Gestión de dependencias y versiones
+            Maven / Gradle (Java)
+            npm / yarn / pnpm (JS/TS)
+            Dependabot / Renovate → Automatizar actualización de librerías con alertas de seguridad.
+
+    🧠 6. Herramientas de análisis mental y toma de decisiones
+            Event Storming (con pizarra física o Miro) → Para mapear procesos del negocio con equipos.
+            Modelos de calidad de software (como ISO/IEC 25010): para definir atributos de calidad como mantenibilidad, rendimiento, etc.
+            Mezcla de intuición, experiencia, y sentido común → Muchas veces, la mejor herramienta del arquitecto es su juicio técnico entrenado.
+
+    🗂️ 7. Herramientas de comunicación y colaboración
+            Slack / Discord / Microsoft Teams → Comunicación directa con desarrolladores, líderes y stakeholders.
+            Miro / FigJam / Whimsical → Whiteboards colaborativos para lluvia de ideas, diseño rápido.
+            Confluence → Documentación más formal y colaborativa.
+
+    🧩 BONUS: Frameworks para facilitar arquitectura limpia
+            Spring Boot + Spring Cloud → Stack empresarial completo con enfoque limpio, ideal para arquitecturas robustas.
+            NestJS (Node.js) → Arquitectura tipo Angular, ordenada, para backends en JavaScript/TypeScript.
+            Hexagonal / Onion / Clean architecture patterns → Puedes implementarlos tú, o usar frameworks que los respeten.
