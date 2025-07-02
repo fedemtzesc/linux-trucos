@@ -13,10 +13,14 @@
     - Es el COMO LO HACE el Sistema o Solucion de SW
     - Son las reglas del juego que aseguran que la aplicacion sea rapida, segura, escalable y facil de usar.
     - Definen las caracteristicas del NIVEL DE CALIDAD del SW
-    - No se enfocan en que es lo que hace el sistema, sino en como lo hace. Como por ejemplo:
+    - No se enfocan en que es lo que hace el sistema, sino en como lo hace. Como en los siguientes
+      ejemplos que describen los siguentes Atributos de Calidad:
     	- Velocidad. Ej.:  El sistema debe de responder en menos de 2 segundos al buscar un producto...
     	- Seguridad. Ej.: Las contraseñas de los usuarios deben de estar encriptadas en la BD.
     	- Compatibilidad. Ej.: El sistema tiene que ser compatible con Celulares, Tablets y PC's
+      - Usabiliad. Ej.: La interfaz de registro debe ser clara y fácil de entender, para crear mi cuenta sin ayuda.
+      - Rendimiento. Ej.: La página de inicio debe cargar en menos de 2 segundos, para no perder tiempo esperando.
+      - Disponibilidad. Ej.: El sistema debe estar disponible las 24 horas, para poder trabajar en cualquier momento.
     - Es lo que se encarga de que cada requisito funcional haga lo que tiene que hacer.
     - No se pueden ver ni tocar, no interactuan con el usuario directamente.
 
