@@ -4,21 +4,21 @@
                     para que cliente o usuario pueda cumplir con cierto(s) objetivo(s).
 
 ✅ Requerimientos Funcionales:
-    - Es el QUE HACE el Sistema de SW
-    - Son las tareas o funcionalidaes que el SW debe cumplir para que el usuario logre sus objetivos.
-    - Lo que permite utilizar la aplicacion de manera comoda y visual
-    - Interactuan con el Usuario de manera directa.
+    - Es el QUE HACE el Sistema o Solucion de SW.
+    - Son las tareas o funcionalidaes que el SW debe cumplir para que el usuario logre ciertos objetivos.
+    - Lo que permite al usuario utilizar la aplicacion de manera comoda y visual.
+    - Interfaz y elementos que interactuan con el Usuario de manera directa.
     
 ✅ Requerimientos NO Funcionales:
-    - Es el COMO LO HACE el Sistema de SW
-    - Son como las reglas del juego para asegurar que la aplicacion sea rapida, segura, escalable y facil de usar.
-    - Definen las caracteristicas de CALIDAD del SW
-    - No se enfocan en que es lo que hace el sistema, sino en como lo hace. Como:
-    	- Velicidad. Ejemplo:  El sistema debe de responder en menos de 2 segundos al buscar un producto...
-    	- Seguridad. Ejemplo: Las contraseñas de los usuarios deben de estar encriptadas en la BD.
-    	- Compatibilidad. Ejemplo: El sistema tiene que ser compatible con Celulares, Tablets y PC's
-    - Es lo que se encarga que la aplicacion cumple con lo que tiene que hacer.
-    - No se puede ver ni tocar, no interactuan con el usuario directamente.
+    - Es el COMO LO HACE el Sistema o Solucion de SW
+    - Son las reglas del juego que aseguran que la aplicacion sea rapida, segura, escalable y facil de usar.
+    - Definen las caracteristicas del NIVEL DE CALIDAD del SW
+    - No se enfocan en que es lo que hace el sistema, sino en como lo hace. Como por ejemplo:
+    	- Velocidad. Ej.:  El sistema debe de responder en menos de 2 segundos al buscar un producto...
+    	- Seguridad. Ej.: Las contraseñas de los usuarios deben de estar encriptadas en la BD.
+    	- Compatibilidad. Ej.: El sistema tiene que ser compatible con Celulares, Tablets y PC's
+    - Es lo que se encarga de que cada requisito funcional haga lo que tiene que hacer.
+    - No se pueden ver ni tocar, no interactuan con el usuario directamente.
 
 ✅ Aprende las bases -  dentro de lo que ya haces...
 ✅ Front End - CSR / SSR / SSG / JAM / ROCA / Universal Rendering / SPA
