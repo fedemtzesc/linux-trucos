@@ -1,5 +1,7 @@
 🤖️️ 🕵 📖 🎓 Conocimientos y Herramientas necesarias para ser Arquitecto de Software 🤖️️ 🕵 📖 🎓
 
+## El arquitecto de software es el encaargado del diseño del mas alto nivel en un sistema o solucion de SW ##
+
 ✅ Requerimientos = Carencia o necesidad que tiene que cumplir una aplicacion de SW
                     para que cliente o usuario pueda cumplir con cierto(s) objetivo(s).
 
@@ -24,11 +26,28 @@
     - Es lo que se encarga de que cada requisito funcional haga lo que tiene que hacer.
     - No se pueden ver ni tocar, no interactuan con el usuario directamente.
 
+✅ Seleccion de las tecnologias a utilizar:
+    - Contenedores
+    - Bases de Datos
+    - Lenguajes de Programacion
+    - Middleware, etc...
+
+✅ Mejora continua y evolucion del sistema
+
+✅ Aseguramiento de la Calidad: Estandares, Metodologias, etc...
+
+✅ Capacidad de liderear equipos y fungir como facilitador y mediador, saber vender su idea a todos los involucrados.
+
 ✅ Aprende las bases -  dentro de lo que ya haces...
+
 ✅ Front End - CSR / SSR / SSG / JAM / ROCA / Universal Rendering / SPA
+
 ✅ Arquitecturas en Comun - Stream Architecture / Clean Architecture / Hexagonal Architecture
+
 ✅ Aprender de System Design
+
 ✅ Investigar siempre el por que de las cosas... (por que se hace asi, o asa?...)
+
 ✅ Diferencias y usos de:
     - Monolito vs Microservicios vs Serverless.
     - Arquitectura Hexagonal, Clean Architecture, Onion, DDD (Domain-Driven Design).
