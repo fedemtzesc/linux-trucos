@@ -1,12 +1,14 @@
-* Requerimientos = Necesidades o carencias que necesita un cliente que haga su aplicacion deseada.
+🤖️️ 🕵 📖 🎓 Conocimientos y Herramientas necesarias para ser Arquitecto de Software 🤖️️ 🕵 📖 🎓
 
-* Requerimientos Funcionales:
+✅ Requerimientos = Necesidades o carencias que necesita un cliente que su aplicacion cumpla con cierto objetivo.
+
+✅ Requerimientos Funcionales:
     - Es el QUE HACE el Sistema de SW
     - Son las tareas o funcionalidaes que el SW debe cumplir para que el usuario logre sus objetivos.
     - Lo que permite utilizar la aplicacion de manera comoda y visual
     - Interactuan con el Usuario de manera directa.
     
-* Requerimientos NO Funcionales:
+✅ Requerimientos NO Funcionales:
     - Es el COMO LO HACE el Sistema de SW
     - Son como las reglas del juego para asegurar que la aplicacion sea rapida, segura, escalable y facil de usar.
     - Definen las caracteristicas de CALIDAD del SW
@@ -16,8 +18,6 @@
     	- Compatibilidad. Ejemplo: El sistema tiene que ser compatible con Celulares, Tablets y PC's
     - Es lo que se encarga que la aplicacion cumple con lo que tiene que hacer.
     - No se puede ver ni tocar, no interactuan con el usuario directamente.
-
-🤖️️ 🕵 📖 🎓 Conocimientos y Herramientas necesarias para ser Arquitecto de Software 🤖️️ 🕵 📖 🎓
 
 ✅ Aprende las bases -  dentro de lo que ya haces...
 ✅ Front End - CSR / SSR / SSG / JAM / ROCA / Universal Rendering / SPA
