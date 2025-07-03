@@ -1,0 +1,5 @@
+1. En su modo por default inicial, spring security hace que se intercambie un valor por medio de una
+   cookie segura una vez que el user se loggeo con el password que arroja spring-security al iniciar
+   el proyecto. Esta cookie se llama JSESSIONID
+
+2. 
