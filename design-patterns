@@ -1,0 +1,42 @@
+* Patrones Creacionales
+  
+  - Son patrones que estan relacionados a la creacion o construccion de objetos.
+  - Estan relacionados a la creacion o construccion de los objetos.
+  - Intentan controlar la forma en que los objetos son creados
+  - Implementan mecanismos que EVITAN CREACION DIRECTA de Objectos.
+
+  
+* Patrones Estructurales
+
+  - Son patrones que tienen que ver con la forma en que las clases se relacionan con otras clases.
+  - Ayudan a dar un mayor orden a nuestras clases ayudando a crear componentes mas flexibles y extensibles.
+
+* Patrones de Comportamiento
+
+  - Son patrones que estan relacionados con procedimientos y con la asignacion de responsabilidad a los objetos.
+  - Engloban tambien patrones de comunicacion entre clases.
+
+
+* Patron Arquitectonico.
+  - Es una solucion general y reutilizable a un problema comun en la Arquitectura de SW dentro de un contexto dado
+  - A diferencia de los Patrones de Diseño, los Patrones Arquitectonicos afectan mas al componente, por lo que
+    cualquier cambio, puede tener un mayor impacto.
+
+* Ejemplo de un Patron Arquitectonico de Arquitectura de 3 Capas:
+
+  ----------------------------------------------
+  |             Component (3 Capas)            |
+  |           ____________________             |
+  |          |    Presentacion     |           |
+  |          ----------------------            |
+|------|          |            |               |
+  |           ____V____________V___            |
+  |          |       Negocio       |           |
+  |           ---------------------            |
+|------|          |            |               |
+  |           ____V____________V___            |
+  |          |        Datos        |           |
+  |           ---------------------            |
+  |                                            |
+  ----------------------------------------------
+
