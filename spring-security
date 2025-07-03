@@ -2,4 +2,9 @@
    cookie segura una vez que el user se loggeo con el password que arroja spring-security al iniciar
    el proyecto. Esta cookie se llama JSESSIONID (*** Pregunta de Examen ***)
 
-2. 
+2. configuracion de la seguridad con nuestra cuenta personalizada:
+   a) Abrir application.properties
+   b) Escribir las siguietnes propiedades:
+      i) spring.security.user.name=nombre_del_usuario_personalizado
+     ii) spring.security.user.password=password_del_usuario_personalizado
+    iii) spring.security.user.roles={ROLE_VIEWER}
