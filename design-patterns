@@ -5,9 +5,12 @@
   - Intentan controlar la forma en que los objetos son creados
   - Implementan mecanismos que EVITAN CREACION DIRECTA de Objectos.
 
-  1. Patron Singleton (Singleton Design Pattern)
+  1. Patron Singleton (Singleton Pattern)
      URL_DOCUM: https://sourcemaking.com/design_patterns/singleton
-    
+  2. Patron Fabrica (Factory Pattern)
+      URL_DOCUM: https://www.tutorialspoint.com/design_pattern/factory_pattern.htm
+  3. Patron Fabrica Abstracta (Abstract Factory Pattern)
+      URL_DOCUM: https://www.tutorialspoint.com/design_pattern/abstract_factory_pattern.htm
   
 * Patrones Estructurales
 
