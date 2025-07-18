@@ -29,6 +29,6 @@
 	a) Proyecto Angular que utilizsa la sintaxis CLASICA: 
 		ng new nombre_proyecto --standalone=false
 	b) Proyecto Angular con las ultimas caracteristicas disponibles: 
-		ng new nombre_proyecto
+		ng new nombre_proyecto (a partir de la version 17)
 
 10.
