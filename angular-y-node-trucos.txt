@@ -26,7 +26,9 @@
 	nvm alias default 0.0.0  --> cambiar por la version deseada
 
 9. Comando para crear un nuevo proyecto de Angular:
-	a) Proyecto Angular que utilizsa la sintaxis CLASICA: ng new nomre_proyecto --standalone=false
-	b) Proyecto Angular con las ultimas caracteristicas disponibles: ng new nomre_proyecto
+	a) Proyecto Angular que utilizsa la sintaxis CLASICA: 
+		ng new nomre_proyecto --standalone=false
+	b) Proyecto Angular con las ultimas caracteristicas disponibles: 
+		ng new nomre_proyecto
 
 10.
