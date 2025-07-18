@@ -27,8 +27,8 @@
 
 9. Comando para crear un nuevo proyecto de Angular:
 	a) Proyecto Angular que utilizsa la sintaxis CLASICA: 
-		ng new nomre_proyecto --standalone=false
+		ng new nombre_proyecto --standalone=false
 	b) Proyecto Angular con las ultimas caracteristicas disponibles: 
-		ng new nomre_proyecto
+		ng new nombre_proyecto
 
 10.
