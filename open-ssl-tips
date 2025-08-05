@@ -1,0 +1,27 @@
+1. Secreto: Solo lo es cuando lo conoce una sola persona.
+
+2. Criptografia Asimetrica
+  i. Curvas Elipticas
+  ii. Factorizacon de numeros primos
+  iii. Logaritmos Discretos
+
+3. La Criptografia Asimetrica, maneja llave publica y llave privada.
+
+4. El riesgo mas peligroso es el ataque del HOMBRE DE ENMEDIO.
+
+5. Comando para ver documentacion de openssl:
+  man openssl
+
+6. Prueba de encripcion de archivo con algoritmo des:
+  openssl enc -des -in prueba.txt -out prueba.enc.des -iter 16   -provider legacy -provider default
+  enter DES-CBC encryption password: METEMOS UN PASSWORD DESEADO
+  Verifying - enter DES-CBC encryption password: CONFIRMAMOS EL PASSWORD
+
+7. Prueba de des-encripcion de archivo con algoritmo des:
+  openssl enc -des -d -in prueba.enc.des -out prueba2.txt -iter 16   -provider legacy -provider default
+  enter DES-CBC decryption password: METEMOS EL PASSWORD ASOCIADO
+
+8. 
+  
+    
+
