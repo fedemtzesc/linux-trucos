@@ -60,7 +60,7 @@
                     PRUEBAS USANDO ALGORITMOS DE FUNCIONES O RESUMEN HASH
 
 18. Caracteristicas de una Funcion HASH:
-  - La salida siempre va a ser una longitud fija. Representacion: IN: FILE ==> HASH_FUCTION ==> OUT: Message Digest
+  - La salida siempre va a ser una longitud fija. Representacion: IN: FILE ==> HASH_FUCTION ==> OUT: Message Digest (digest = resumen)
     Sin importar el tamaño de la entrada...
 
   - De la salida es literalmente imposible reconstruir la entrada (Un solo sentido)
@@ -70,7 +70,59 @@
     que se obtenga un mismo HASH de dos archivos diferentes. No se puede garantizar que exista 
     una fuincion hash perfecta.
 
-19. 
+19. Ejemplos de aplicacion HASH a algunos de los archivos de ejemplo:
+            openssl dgst -md5 pp.txt 
+    SALIDA: MD5(pp.txt)= e7df7cd2ca07f4f1ab415d457a6e1c13
+            openssl dgst -md5 algs-count.txt
+    SALIDA: MD5(algs-count.txt)= 8772496d803e5a63a7392398d99cc6d5
+    
+            openssl dgst -sha1 pp.txt 
+    SHA1(pp.txt)= 1be168ff837f043bde17c0314341c84271047b31
+            openssl dgst -sha1 algs-count.txt
+    SHA1(algs-count.txt)= f74efc6a5972cbf6dbcb6689a282e2cf8d21cdc2
+
+            openssl dgst -sha256 pp.txt 
+    SHA2-256(pp.txt)= a883dafc480d466ee04e0d6da986bd78eb1fdd2178d04693723da3a8f95d42f4
+
+            openssl dgst -sha512 pp.txt 
+    SHA2-512(pp.txt)= 7985558370f0de86a864e0050afdf45d7029b8798bcd72cddbf781329f99380e3f3b1afdca6765d89fc388b213df8f6a193cfc56d4ff2ef6e0a99bd883a6d98c
+
+
+    *** NOTAS: 
+    - Como se puede, ver, las salidas son diferentes siempre. 
+    - MD5 ya no es seguro hace años fue violado.
+    - Para sacar la longitud en bits de un resumen HASH solo multiplica la cantidad
+      de caracteres por 4. Ejemplo: si tomamos el ultimo hash mide 128 caracteres, 
+      y luego lo multiplicamos por 4 128 * 4 = 512 bit como el nombre del algoritmo sha512
+
+20. Existen comandos correspondientes que hacen lo mismo en Kali Linux:
+    - md5sum pp.txt
+    - sha1sum pp.txt
+    - sha256sum pp.txt
+    - etc...
+
+21. Se llama Prueba de Integridad cuando se descarga un archivo y en la pagina del proveedor se 
+    nos indica cual es el resumen sha512 (o el sha que indique el proveedor) de dicho archivo. 
+    El procedimiento seria el siguiente:
+    1. Se descarga el archivo
+    2. Una vez descargado podemos ejecutar estos comandos:
+      a) sha256sum nombre_archivo_descargado
+    o
+      b) openssl dgst sha512 nombre_archivo_descargado
+    3. Comparamos el hash o resumen obtenido contra el publicado por el proveedor y:
+      a) Si son iguales, significa que el archivo es legitimo y esta completo
+      b) Si NO son iguales, significa que el archivo o no es legitimo, o no se descargo totalmente
+
+22.
+
+
+
+
+
+
+  
+
+
   
     
 
