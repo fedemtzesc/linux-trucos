@@ -168,10 +168,29 @@
   siguiente comando:
   openssl asn1parse -in certificado_fdxsoft_auto_firmado.csr
 
+32. RESUMEN:
+  PASO #1: Creamos una Clave Privada
+  -rw------- 1 federico federico      1704 ago  5 08:49  clave_privada_fdxsoft.pem
+  PASO #2: A partir de la Clave Privada, generamosuna Clave Publica
+  -rw-rw-r-- 1 federico federico       451 ago  5 08:49  clave_publica_fdxsoft.pem
+  PASO #3: Posteriormente, creamos un certificado para firmar (crs / certificate signin request)
+  -rw-rw-r-- 1 federico federico      1143 ago  5 08:54  certificado_fdxsoft_para_firmar.csr
+  PASO #4: Finalmente, se creo un certificado auto-firmado con la Clave Privada o Root
+  -rw-rw-r-- 1 federico federico      1338 ago  5 09:10  certificado_fdxsoft_auto_firmado.crt
 
-  
-
-
-  
+33. Ejemplo Practico #1 CIFRAR CON CERTIFICADOS
+    Vamos a encriptar un archivo usando el certificado auto-firmado:
+      openssl smime -encrypt -binary -aes-256-cbc -in pp.txt -out pp.txt.smime -outform DER certificado_fdxsoft_auto_firmado.crt
+    Ya para desrncriptarlo usamos el siguiente comando (OJO: Como podemos ver, solo se puede desencriptar con el certificado root):
+      openssl smime -decrypt -aes-256-cbc -in pp.txt.smime -inform DER -out pp.txr.smime.descifrado -inkey clave_privada_fdxsoft.pem 
     
+34. Ejemplo Practico #2 FIRMAR CON CERTIFICADOS
+    Para firmar un archivo con nuestro certificado usamos el siguiente comando:
+      openssl dgst -c -sign clave_privada_fdxsoft.pem -out pp.txt.firmado pp.txt
+    Este archivo fue firmado por la Clave Privada de FDXSOFT. Asi que, quien tenga
+    la Clave Publica de FDXSOFT, sabra si el archivo fue firmado realmente por FDXSOFT:
+      openssl dgst -verify clave_publica_fdxsoft.pem -signature pp.txt.firmado pp.txt
+      Verified OK
+
+
 
