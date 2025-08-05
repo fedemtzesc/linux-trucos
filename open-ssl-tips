@@ -60,10 +60,15 @@
                     PRUEBAS USANDO ALGORITMOS DE FUNCIONES O RESUMEN HASH
 
 18. Caracteristicas de una Funcion HASH:
-  - La salida siempre va a ser una longitud fija. Sin importar el tamaño de la entrada...
-  - De la salida es imposible reconstruir la entrada (Un solo sentido)
-  - Fortaleza a Colisiones, (funcion hash perfecta)
+  - La salida siempre va a ser una longitud fija. Representacion: IN: FILE ==> HASH_FUCTION ==> OUT: Message Digest
+    Sin importar el tamaño de la entrada...
 
+  - De la salida es literalmente imposible reconstruir la entrada (Un solo sentido)
+
+  - Fortaleza a Colisiones, (funcion hash perfecta), Jamas se va a obtener un mismo HASH de dos 
+    archivos diferentes. No es imposible, pero es probabilisticamente remotamente imposible
+    que se obtenga un mismo HASH de dos archivos diferentes. No se puede garantizar que exista 
+    una fuincion hash perfecta.
 
 19. 
   
