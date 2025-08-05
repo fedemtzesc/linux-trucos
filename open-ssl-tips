@@ -161,6 +161,13 @@
 29. Con este comando podemos revisar todos los tags contenidos en nuestro nuevo certificado:
   openssl asn1parse -in certificado_fdxsoft_para_firmar.csr
 
+30. Ahora vamos a crear un certificado auto-firmado con nuestra Clave Privada:
+  openssl x509 -req -days 365 -in certificado_fdxsoft_para_firmar.csr -signkey clave_privada_fdxsoft.pem -out certificado_fdxsoft_auto_firmado.csr
+
+31. Si quisieramos ver el conteido de este nuevo certificado auto-firmado, solamente ejecutamos el 
+  siguiente comando:
+  openssl asn1parse -in certificado_fdxsoft_auto_firmado.csr
+
 
   
 
