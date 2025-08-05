@@ -113,9 +113,28 @@
       a) Si son iguales, significa que el archivo es legitimo y esta completo
       b) Si NO son iguales, significa que el archivo o no es legitimo, o no se descargo totalmente
 
-22.
+22. Envio de archivo con HMAC (hash-based message authentication code) protegido con autenticacion:
+    a) Si yo le quisiera mandar un archivo a un amigo, pero protegido por password
+      openssl dgst -hmac "12345" pp.txt
+    b) Le madaria yo el archivo y le diria que ejecute el mismo comando anterior, y como resultado
+      mi amigo tiene que obtener la misma salida.
 
+23. Para generar passwords mas complejos como por ejemplo, para no utuilizar passwords tan triviales
+    como en el ejemplo anterior, existe la siguiente herramienta de openssl:
+    openssl rand -hex 32
+    Ejemplo:
+      openssl rand -hex 32
+      c0a813dee807d7383d842e6c000c22cc60a38a2269f0e1678b5dcd2d79d71933
+    Y si nos vamos al ejemplo anterior, usando este password generado aleatoriamente:
+      openssl dgst -hmac "c0a813dee807d7383d842e6c000c22cc60a38a2269f0e1678b5dcd2d79d71933" pp.txt
+    Obtendriamos la siguiente salida:
+      HMAC-SHA256(pp.txt)= 90abc13a2527d038d13c6b8de644ef5b0972dd838c32f5206a890dcc98b6d82a
 
+24. Tambien podemos obtener password en base 64 utilizando esta misma herramienta pero en otro modo:
+    openssl rand -base64 32
+    UX5wZ0mOmGmrPjNcSJPqXxNpzklMYF/eancRnPrYW7g=
+
+25. 
 
 
 
