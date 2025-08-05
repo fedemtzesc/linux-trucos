@@ -11,7 +11,7 @@
 
 5. Comando para ver documentacion de openssl:
   man openssl
-
+                    PRUEBAS USANDO ALGORITMOS ENCRIPTACION SIMETRICA
 6. Prueba de encripcion de archivo con algoritmo des:
   openssl enc -des -in prueba.txt -out prueba.enc.des -iter 16   -provider legacy -provider default
   enter DES-CBC encryption password: METEMOS UN PASSWORD DESEADO
@@ -21,7 +21,51 @@
   openssl enc -des -d -in prueba.enc.des -out prueba2.txt -iter 16   -provider legacy -provider default
   enter DES-CBC decryption password: METEMOS EL PASSWORD ASOCIADO
 
-8. 
+8. Prueba de encripcion con el algoritmo de encripcion AES-256:
+  openssl enc -aes-256-cbc -in prueba.txt -out prueba.enc.aes-256 -iter 256
+
+9. Prueba de des-encripcion con el algoritmo de encripcion AES-256:
+  openssl enc -aes-256-cbc -d -in prueba.enc.aes-256 -out prueba2-aes-256.txt -iter 256
+  *** Nota: el parametro -d es el que le dice al ejecutable que esta en modo de des-encripcion.
+
+10. Comando para listar todos los algoritmos de cifrado que maneja OpenSSL:
+  openssl list -cipher-algorithms
+
+                    PRUEBAS USANDO ALGORITMOS ENCRIPTACION ASIMETRICA
+
+11. Comando para listar todos los algoritmos de cifrado de Clave Publica que maneja OpenSSL:
+  openssl list -public-key-algorithms
+
+12. Comando para generacion de Clave Privada con algoritmo RSA:
+  openssl genrsa -out clave-privRSA.pem 2048
+
+13. Generar una clave publica asociada con la Clave Privada anterior:
+  openssl rsa -in clave-privRSA.pem -pubout -out clave_pubRSA.pem
+
+14. Si queremos generar una Clave Privada y que nos pida un password cada vez que la llamemos:
+  openssl genrsa -aes128 -out clave_priv_RSA_con_passw.pem 2048
+
+15. Generar una clave publica asociada con la Clave Privada anterior:
+  openssl rsa -in clave_priv_RSA_con_passw.pem -pubout -out clave_pub_RSA_con_passw.pem
+
+  NOTA: Lo ideal es tener una clave Publica y Privada protegida con Password
+
+16. Ahora hacemos un ejemplo de un fichero encriptado con la Clave Publica que creamos previamente (la que tiene password)
+  openssl pkeyutl -encrypt -inkey clave_pub_RSA_con_passw.pem -pubin -in pp.txt -out pp.criptoRSA
+
+17. Para posteriormente desencriptar el archivo usando la Clave Privada:
+  openssl pkeyutl -decrypt -inkey clave_priv_RSA_con_passw.pem -in pp.criptoRSA -out datos.recupRSA
+  Enter pass phrase for clave_priv_RSA_con_passw.pem: METEMOS EL PASSWORD
+
+                    PRUEBAS USANDO ALGORITMOS DE FUNCIONES O RESUMEN HASH
+
+18. Caracteristicas de una Funcion HASH:
+  - La salida siempre va a ser una longitud fija. Sin importar el tamaño de la entrada...
+  - De la salida es imposible reconstruir la entrada (Un solo sentido)
+  - Fortaleza a Colisiones, (funcion hash perfecta)
+
+
+19. 
   
     
 
