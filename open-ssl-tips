@@ -134,9 +134,32 @@
     openssl rand -base64 32
     UX5wZ0mOmGmrPjNcSJPqXxNpzklMYF/eancRnPrYW7g=
 
-25. 
+25. En resumen, podemos generar una Clave Privada, y de esta generar una Clave Publica.Y su mayor 
+    vulnerabilidad es el ATAQUE DEL HOMBRE EN ENMEDIO. Por eso, es muy importante como se distribuyen 
+    estas claves. Por lo cual existen dos formas de distribuir estas claces:
+    a) Por medio de una Estructura de Confianza, en la cual, siendo una empresa pequeña asigno a
+       una persona responsable de custodiar y distribuir estas claves.
+    b) Cuando la empresa crece, la Estructura de Confianza ya no sirve, ahora es necesario tener
+       algo mas solido, y aqui nace el concepto de Autoridad de Certificacion que es un SW o una maquina
+       automatica que genra el par de claves, pero ademas les mete algunos tags o etiquetas aidcionales
+      para darle validez a dichas claves (formato X.509) lo cual conforma ahora lo que se llama un 
+      Certificado Digital.Dicha Autoridad de Certificacion, sera ahora quien los genere, los firme 
+      y los distribuya. 
 
+                    PRUEBAS CREANDO CERTIFICADOS DIGITALES
 
+26. El primer paso es crear nuestro propia Clave Privada:
+  openssl genrsa -out clave_privada_fdxsoft.pem 2048
+
+27. Despues, procedemos a crear nuestra Clave Publica
+  openssl rsa -in clave_privada_fdxsoft.pem -pubout -out clave_publica_fdxsoft.pem
+
+28. Ahora vamos a crear un certificado para firmar:
+  openssl req -new -key clave_privada_fdxsoft.pem -out certificado_fdxsoft_para_firmar.csr
+  Le damos la informacion que se nos requiere, el password y listo, no lo crea en menos de un segundo.
+
+29. Con este comando podemos revisar todos los tags contenidos en nuestro nuevo certificado:
+  openssl asn1parse -in certificado_fdxsoft_para_firmar.csr
 
 
   
