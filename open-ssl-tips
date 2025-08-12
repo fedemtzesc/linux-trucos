@@ -207,6 +207,8 @@
       openssl x509 -inform DER -in maef730713hd2.cer -out maef730713hd2.pem
   b) Extraer la clave pública del PEM:
       openssl x509 -in maef730713hd2.pem -pubkey -noout > maef730713hd2_pub.pem
+      *** NOTA: SI me quiero saltar los pasos a y b y hacerlo directamente, usaria el comando:
+        openssl x509 -inform DER -in archivo.cer -pubkey -noout > maef730713hd2_pub.pem
   c) Ahora sí, verificar la firma:
       openssl dgst -c -verify maef730713hd2_pub.pem -signature pp.txt.firmado pp.txt
 
