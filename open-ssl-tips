@@ -213,4 +213,7 @@
       openssl dgst -c -verify maef730713hd2_pub.pem -signature pp.txt.firmado pp.txt
 
 39. Comando para Ver/parsear la estructura ASN.1 (útil para ver campos internos):
-      openssl asn1parse -in maef730713hd2.cer -inform DER -i
+    openssl asn1parse -in maef730713hd2.cer -inform DER -i
+
+40. Comando para pasar mi llave prvada de SAT de DER a PEM (b64):
+    openssl rsa -inform DER -in Claveprivada_FIEL_MAEF730713HD2_20230816_121420.key -out Claveprivada_FIEL_MAEF730713HD2_20230816_121420.pem
