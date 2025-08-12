@@ -198,4 +198,15 @@
 35. Comando para ver fechas de vigencia de mi certificado de mi e-firma del SAT:
     openssl x509 -inform DER -in maef730713hd2.cer -noout -dates
 
+                    PRUEBAS CON ARCHIVOS DEL SAT
+36. Comando para firmar un archivo con mi Clave Privada del SAT (*.key)
+    openssl dgst -c -sign Claveprivada_FIEL_MAEF730713HD2_20230816_121420.key -out pp.txt.firmado pp.txt
+
+37. Ahora para comprobar que el documento firmado esta firmado realmente con mi firma *.key se realizan los siguientes pasos:
+  a) Convertir el .cer del SAT (DER) a PEM:
+      openssl x509 -inform DER -in maef730713hd2.cer -out maef730713hd2.pem
+  b) Extraer la clave pública del PEM:
+      openssl x509 -in maef730713hd2.pem -pubkey -noout > maef730713hd2_pub.pem
+  c) Ahora sí, verificar la firma:
+      openssl dgst -c -verify maef730713hd2_pub.pem -signature pp.txt.firmado pp.txt
 
