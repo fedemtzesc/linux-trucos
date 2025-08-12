@@ -192,5 +192,10 @@
       openssl dgst -verify clave_publica_fdxsoft.pem -signature pp.txt.firmado pp.txt
       Verified OK
 
+35. Comando para ver el contenido o informacion de mi certificado de mi e-firma del SAT:
+    openssl x509 -inform DER -in maef730713hd2.cer -noout -text
+
+35. Comando para ver fechas de vigencia de mi certificado de mi e-firma del SAT:
+    openssl x509 -inform DER -in maef730713hd2.cer -noout -dates
 
 
