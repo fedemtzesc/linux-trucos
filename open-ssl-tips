@@ -217,3 +217,34 @@
 
 40. Comando para pasar mi llave prvada de SAT de DER a PEM (b64):
     openssl rsa -inform DER -in Claveprivada_FIEL_MAEF730713HD2_20230816_121420.key -out Claveprivada_FIEL_MAEF730713HD2_20230816_121420.pem
+
+          ***** PROCESO COMPLETO DE COMO SE CREAN LOS ARCHIVOS ***
+
+41. Todo empieza creando la clave privada:
+  a) Este comando es el mas basico para crear una Clave Privada pero sin password:
+      openssl genrsa -out private.key 2048
+  b) Ya si queremos una Clave Privada que contenga password, se utiliza el siguiente comando:
+      openssl genrsa -aes256 -out private.key 2048
+  c) Para hacer la Clave Privada y especificandole el password del nuevo contribuyente
+     el SAT usa un comando como estos: 
+      i) echo "MiContraseñaSegura" | openssl genrsa -aes256 -passout stdin -out private.key 2048
+     ii) openssl genrsa -aes256 -passout pass:MiContraseñaSegura -out private.key 2048
+          Esto se puede combinar con un script para que el password venga de:
+              Un archivo (-passout file:/ruta/password.txt)
+              Una variable de entorno (-passout env:VAR_NAME)
+    iii) openssl genrsa -aes256 -passout fd:0 -out private.key 2048 < password.txt
+
+42. Con la llave privada, generas una solicitud de certificado (CSR = Certificate Signing Request).
+    Ahí incluyes:
+      Nombre o razón social
+      RFC
+      CURP (en caso de persona física)
+      Correo
+      Tipo de certificado (e.firma o CSD)
+
+    Ejemplo con OpenSSL:
+      
+
+      
+
+
