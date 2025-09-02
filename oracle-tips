@@ -1,0 +1,21 @@
+****** CREACION DE IMAGEN DE ORACLE DENTRO DE DOCKER ******
+
+1. Primero ons loggeamos con docker dentro de Oracle
+    docker login https://container-registry.oracle.com/
+    Username: fdx.soft.mx@gmail.com
+    Password: OJO Tengo que solicitar el token en la pagina
+
+2. Una vez firmados procedemos a instalar la imagen de Oracle en  nuestro Docker:
+    docker pull container-registry.oracle.com/database/express:latest
+
+3. Ya que termino de instalar la imagen, ahora si podemos ejecutar contenedores de Oracle con el comando:
+    docker run -d --name oracle-db -p 1521:1521 -p 5500:5500 -e ORACLE_PWD=secret container-registry.oracle.com/database/express:21.3.0-xe
+
+4. Revisamos que este corriendo con el siguiente comando:
+    docker ps -a
+
+5. Ahora revisamos el log de nuestro contenedor generado con: 
+    docker logs oracle-db
+
+
+
