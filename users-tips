@@ -1,2 +1,14 @@
 1. Comando para dar de alta usuario y que no necesite login en Linux:
     useradd -r -d /opt/kafka -s /usr/sbin/nologin kafka
+
+2. Comando para renombrar o cambiarle el nombre a un grupo de Linux:
+    sudo groupmod -n nuevo_nombre nombre_a_cambiar
+
+3. Comando para agregar un grupo nuevo a Linux:
+    sudo groupadd -g 54000 nombre_nuevo_grupo
+
+4. Comando para agregar un usuario nuevo a Linux y especificar a que grupos va a pertenecer:
+        sudo useradd -g grupo_nombre_01 [-G grupo_nombre_02,...,grupo_nombre_n] nombre_nuevo_usuario
+
+5. Comando para modificar un usuario existente de Linux y especificar a que grupos va a pertenecer:
+       sudo usermod -g grupo_nombre_01 [-G grupo_nombre_02,...,grupo_nombre_n] nombre_nuevo_usuario
