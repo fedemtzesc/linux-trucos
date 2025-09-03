@@ -99,4 +99,26 @@
             REFERENCES clientes(id)
     );
 
+****** CONFIGURACIONES EN LINUX PARA TRABAAJAR CON ORACLE ******
+19. Comando para agregar el grupo de instaladores de oracle en nuestro Linux:
+        groupadd -g 54000 oinstall
+
+20. Comando para agregar el grupo de Administradores de Oracle, que pueden entrar y utilizarlo:
+        groupadd -g 54001 dba
+
+20. Comando para agregar el grupo de operaciones limitadas como administradores de BD:
+        groupadd -g 54002 oper
+
+21. Crear mi usuario de trabajo diario con Oracle (nombre usuario: oracle):
+        useradd -g oinstall -G dba,operators oracle
+        NOTAS: 
+    `    - si es modificacion usamos usermod en vez de useradd
+         - Para revisar que se hizo correctamente tecleamos el comando
+                groups oracle
+            y nos tiene que arrojar algo como esto:
+                oracle : oinstall dba operators
+
+22. 
+
+
 
