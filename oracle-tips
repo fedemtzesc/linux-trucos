@@ -49,10 +49,14 @@
     ALTER SESSION SET CONTAINER = XEPDB1;
 
 9. Comandos para crear un usuario nuevo:
-    CREATE USER miusuario IDENTIFIED BY mipassword;
-    GRANT CONNECT, RESOURCE TO miusuario;
+    CREATE USER nuevo_usuario IDENTIFIED BY "mipassword"
+    DEFAULT TABLESPACE "USERS"
+    TEMPORARY TABLESPACE "TEMP";
 
-    NOTA: miusuario será local solo en XEPDB1
+    GRANT CONNECT, RESOURCE TO nuevo_usuario;
+
+    NOTA: Esto se tiene que hacer estando dentro de el PDB: XEPDB1
+          si no se encuentra en este use el comando del punto 8.
 
 10. Ahora nos conectamos con nuestro usuario:
     CONNECT miusuario/mipassword;
