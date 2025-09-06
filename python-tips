@@ -1,0 +1,4 @@
+1. Como crear un entorno virtual usando Anaconda:
+    conda create -n nombre_env python=version
+      ejemplo:
+    conda create -n fdx01 python=3.11
