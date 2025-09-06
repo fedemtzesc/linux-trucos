@@ -2,3 +2,11 @@
     conda create -n nombre_env python=version
       ejemplo:
     conda create -n fdx01 python=3.11
+
+2. Cuando en anaconda navigator no se este cargando el entorno y marque error
+   se tiene que editar el siguiente archivo y meterle el path de bin de Anaconda:
+        sudo nano /etc/environment
+        Le agregamos el math de:
+        /home/federico/anaconda3/bin
+        Y finalmente guardamos y cerramos el archivo
+
