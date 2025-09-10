@@ -1,0 +1,4 @@
+1. Cuando los elementos miltipart de un form-data request desde Postman esten llegando en NULL
+   como por ejemplo los archivos CSD. La solucion esta en el path de los archivos ya que no deben
+   contener caracteres especiales ni espacios.
+   
