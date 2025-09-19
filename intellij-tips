@@ -1,0 +1,40 @@
+Paso a paso para incluir tu PXSecurity.jar en un Spring Boot JAR
+1️⃣ Instalar el JAR en tu repo local de Maven
+    
+    mvn install:install-file \
+      -Dfile=/home/federico/NetBeansProjects/jars/PXSecurity.jar \
+      -DgroupId=mx.com.datalogic \
+      -DartifactId=pxsecurity \
+      -Dversion=1.0.0 \
+      -Dpackaging=jar
+
+Notas:
+
+Cambié el artifactId a pxsecurity para que refleje más el nombre original.
+Maven lo va a renombrar automáticamente a pxsecurity-1.0.0.jar en BOOT-INF/lib.
+
+2️⃣ Declarar la dependencia en tu pom.xml
+    
+    <dependency>
+        <groupId>mx.com.datalogic</groupId>
+        <artifactId>pxsecurity</artifactId>
+        <version>1.0.0</version>
+    </dependency>
+
+Así Maven sabe que es una dependencia y Spring Boot lo incluye en el JAR ejecutable.
+
+3️⃣ Verificar que Spring Boot lo incluya
+  Después de mvn clean package, verifica:
+
+    jar tf target/sat.data-0.1.1-SNAPSHOT.jar | grep pxsecurity
+
+Deberías ver algo como:
+
+    BOOT-INF/lib/pxsecurity-1.0.0.jar
+
+✅ Eso confirma que tu JAR está dentro del Spring Boot JAR y Spring Boot lo cargará en runtime.
+
+
+
+
+
