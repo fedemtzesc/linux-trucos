@@ -9,3 +9,6 @@
         Le agregamos el math de:
         /home/federico/anaconda3/bin
         Y finalmente guardamos y cerramos el archivo
+
+3. Comando de anaconda para ver los entornos instalados:
+        conda info --envs
