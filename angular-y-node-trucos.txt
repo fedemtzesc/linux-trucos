@@ -31,4 +31,7 @@
 	b) Proyecto Angular con las ultimas caracteristicas disponibles: 
 		ng new nombre_proyecto (a partir de la version 17)
 
-10.
+10.Si necesitas varias versiones distintas, la práctica es instalar el Angular CLI de manera local en cada proyecto:
+	npm install @angular/cli@X.Y.Z --save-dev
+   y luego usarlo con:
+	npx ng version
