@@ -21,23 +21,17 @@
     docker exec -it oracle-db bash
    Y luego ejecutamos los sguientes comandos:
     a) sqlplus system/secret                *** NOTA: secret es la password que le establecimos a la hora de crear el contenedor
-       Para lo cual nos debe aparecer lo siguiente para saber que estamos ya conectados a la BD con el usuario system:
-            SQL*Plus: Release 21.0.0.0.0 - Production on Tue Sep 2 21:48:37 2025
-            Version 21.3.0.0.0
-            
-            Copyright (c) 1982, 2021, Oracle.  All rights reserved.
-            
-            Last Successful login time: Tue Sep 02 2025 21:21:58 +00:00
-            
-            Connected to:
-            Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
-            Version 21.3.0.0.0
-            
-            SQL> 
+       
     b) Otra opcion para conectarse es:
         sqlplus /nolog
         luego ejecutar el comando:
         CONNECT sys/secret AS SYSDBA;
+
+    c) Otra sintaxis para conectarse es la siguiente:
+        sqlplus NOMBRE_USUARIO@//mi_host:1521/NOMBRE_SERVICIO
+
+    d) Otra sintaxis mas para conectarse es la siguiente:
+        sqlplus NOMBRE_USUARIO@NOMBRE_DB
 
     Si no arroja error en alguna de las dos opciones, quiere decir que nuestro server de Oracle esta correcto.
 
