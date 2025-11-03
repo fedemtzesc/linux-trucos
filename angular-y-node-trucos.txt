@@ -44,3 +44,9 @@
 
 12.	Comando para generar un componente inline, esto es, que no tenga archivo html ni css:
 		ng g c nombre-componente-en-linea --inline-template --inline-style
+
+13. Comandos para instalar Bootstrap y Poppers
+		npm install bootstrap@latest --save		o 	npm i bootstrap@latest --save
+		npm install @popperjs/core --save		o 	npm i @popperjs/core --save
+
+
