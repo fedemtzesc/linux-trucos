@@ -48,5 +48,10 @@
 13. Comandos para instalar Bootstrap y Poppers
 		npm install bootstrap@latest --save		o 	npm i bootstrap@latest --save
 		npm install @popperjs/core --save		o 	npm i @popperjs/core --save
+	Posteriormenete nos vamos a angular.json a realizar las configuraciones necesarias:
+		"styles" : [
+			"node_modules/bootstrap/dist/css/boostrap.min.css",
+			"src/styles.css"
+		
 
 
