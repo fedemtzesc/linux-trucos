@@ -60,3 +60,10 @@
 			"node_modules/bootstrap/dist/js/bootstrap.min.js"
 		]
 
+		Una vez realizado esto, ya podemos aplicarle estilos de bootstrap a los tags de nuestros
+		componentes.
+
+		*** TIP: Si queremos tener nuestra app en modo oscuro le podemos aplicar el
+				siguiente estilo al al tag html de nuestro archivo index.html:
+					data-bs-theme="dark"
+
