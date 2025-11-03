@@ -36,3 +36,11 @@
 	npm install @angular/cli@X.Y.Z --save-dev
    y luego usarlo con:
 	npx ng version
+
+11.	Flag que hay que agregar a la hora de crear componentes para que no se genere el archivo de pruebas:
+		--skip-tests
+	Ejemplo:
+		ng g c nombre-component --skip-tests
+
+12.	Comando para generar un componente inline, esto es, que no tenga archivo html ni css:
+		ng g c nombre-componente-en-linea --inline-template --inline-style
