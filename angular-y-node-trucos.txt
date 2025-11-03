@@ -50,8 +50,13 @@
 		npm install @popperjs/core --save		o 	npm i @popperjs/core --save
 	Posteriormenete nos vamos a angular.json a realizar las configuraciones necesarias:
 		"styles" : [
-			"node_modules/bootstrap/dist/css/boostrap.min.css",
+			"node_modules/bootstrap/dist/css/bootstrap.min.css",
 			"src/styles.css"
 		
+		y
 
+		"scripts" : [
+			"node_modules/@popperjs/core/dist/umd/popper.min.js",
+			"node_modules/bootstrap/dist/js/bootstrap.min.js"
+		]
 
