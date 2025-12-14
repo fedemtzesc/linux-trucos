@@ -11,13 +11,15 @@ Generacion y uso de llaves pribadas y publicas.
               fdx.soft.mx@gmail.com
         -e   indica la bandera que especifica el archico a encriptar:
               secreto
-        Otra forma es la siguiente:
+        Otras formas son las siguientes:
                 gpg --encrypt secret_msg.txt (y luego escogemos la llave para encriptar)
+                gpg -c secret_msg.txt
 
 3. Comando para desencriptar el archivo encriptado, y meter la salida dentro de otro archivo:
         gpg -d secreto.gpg >> secreto
-        La otra forma es:
+        Las otras formas son:
                 gpg --decrypt secret_msg.txt.gp (e introducimos el password)
+                gpg  secret_msg.txt.gpg
 
 4. Para poder tener un almacen de passwords y llaves instalamos el programa pass con:
         sudo apt install pass
@@ -61,4 +63,12 @@ Generacion y uso de llaves pribadas y publicas.
 
 12. Generar nuestra llave publica de nuestra llave privada con gpg usando este comando:
         gpg --armor --export fdx.soft.mx@gmail.com > llave_publica_gmail.asc
+
+13. Importar una llave al repositorio de gpg:
+        gpg --import fdx.soft.mx@gmail.com.asc 
+        gpg: key 04C428EDFCAF46C8: "FDXSOFT SA de CV <fdx.soft.mx@gmail.com>" not changed
+        gpg: key D7A1333BC42729DE: "Federico Martinez <fdx.soft.mx@gmail.com>" not changed
+        gpg: key 03B251462626B1C1: "Lic. Federico Martinez Escamilla (Llave privada para empresa FDXSOFT SA de CV) <fdx.soft.mx@gmail.com>" not changed
+        gpg: Total number processed: 3
+        gpg:              unchanged: 3
 
