@@ -45,4 +45,13 @@ Generacion y uso de llaves pribadas y publicas.
 
 10. Comando para listar las llaves que tenemos guardadas:
         gpg --list-keys
-    NOTA: Este comando es como gpa pero en modo texto
+        NOTA: Este comando es como gpa pero en modo texto
+
+11. Subir nuestra llave publica a un server:
+        gpg --keyserver hkp://pgp.mit.edu --send-keys 341D74D5178EB470A8367BB403B251462626B1C1
+        gpg --keyserver hkp://keys.openpgp.org --send-keys 341D74D5178EB470A8367BB403B251462626B1C1
+        gpg --keyserver https://keys.openpgp.org/ --send-keys 341D74D5178EB470A8367BB403B251462626B1C1
+
+        Podemos consultar si se subio en el siguiente sitio usando el correo electronico asociado:
+                https://keys.openpgp.org/
+
