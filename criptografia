@@ -1,1 +1,15 @@
+Generacion y uso de llaves pribadas y publicas.
 
+1. Comando para generar una llave privada con open gpg:
+    gpg --full-gen-key
+
+2. Comando para encriptar un archivo:
+    gpg -r fdx.soft.mx@gmail.com -e secreto
+   Donde:
+    gpg  comando basico de open gpg
+    -r   referencia de la llave privada que se usara para la encripcion, en este casi el email de mi llave privada:
+          fdx.soft.mx@gmail.com
+    -e   indica la bandera que especifica el archico a encriptar:
+          secreto
+    
+    
