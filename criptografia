@@ -11,5 +11,32 @@ Generacion y uso de llaves pribadas y publicas.
           fdx.soft.mx@gmail.com
     -e   indica la bandera que especifica el archico a encriptar:
           secreto
-    
+
+3. Comando para desencriptar el archivo encriptado, y meter la salida dentro de otro archivo:
+    gpg -d secreto.gpg >> secreto
+
+4. Para poder tener un almacen de passwords y llaves instalamos el programa pass con:
+    sudo apt install pass
+
+5. Luego, para inicializa repositorio de llaves lo hacemos con este comando:
+    federico@maximous:~$ pass init fdx.soft.mx@gmail.com
+    mkdir: created directory '/home/federico/.password-store/'
+    Password store initialized for fdx.soft.mx@gmail.com
+
+6. Ahora para ir introduciendo passwords nuevos usamos el siguiente comando:
+    pass insert principal             #principal es el nombre con el que voy a identificar mi llave a insertar
+    Enter password for principal:     # introduzco la llave asociada a ese identificador
+    Retype password for principal:    # y luego su confirmacion
+
+7. Comando para ver las claves asociadas a los passwords que tenemos almacenados:
+    federico@maximous:~$ pass
+    Password Store
+    ├── Facebook
+    └── principal
+
+8. Para poder acceder al password guardado asociado a la llave tecleamos:
+    federico@maximous:~$ pass Banks
+    Cal...06
+
+
     
