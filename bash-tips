@@ -1,0 +1,9 @@
+1. Truco para deshabilitar la cámara de mi equipo Linux temporalmente:
+  sudo modprobe -r uvcvideo
+
+2. Bloqueando la webcam de forma indefinida.
+      Abrimos el archivo par asu edicion:
+        sudo nano /etc/modprobe.d/blacklist.conf
+      Acto seguido agregamos estas dos lineas al fichero y guardamos, y ya tenemos la webcam inhabilitada:
+        #Disable webcam
+        blacklist uvcvideo
