@@ -100,3 +100,45 @@
       b) Si queremos ver la lista de manera descendente por un campo llamado nombre:
             db.post.find({},{nombre:1,fecha:1,_id:0}).sort({nombre:-1})
       *** NOTA: Como podemos observar, cambiamos el orden en funcion de una bandera de ascendente:1 y descendente:-1
+
+20. Agregar seguridad al servidor de MongoDB
+      a) Entra a la shell: mongosh
+      b) Cambia a la DB de administración:
+            use admin
+      c) Crea el usuario (cambia tu_usuario y tu_password por los que quieras):
+            db.createUser({
+              user: "admin_federico",
+              pwd: "tu_password_seguro",
+              roles: [ { role: "root", db: "admin" } ]
+            })
+      d) Sal de la shell: exit
+      e) Activar la autenticación en el sistema
+         Ahora debemos decirle a MongoDB que no deje entrar a nadie sin credenciales modificando 
+         su archivo de configuración según la documentación oficial de MongoDB.
+      f) Abre el archivo con privilegios de root:
+            sudo nano /etc/mongod.conf
+      g) Busca la sección #security: (usa Ctrl + W para buscar). Déjala exactamente así 
+         (asegúrate de quitar el símbolo # y respetar los 2 espacios de sangría):
+            security:
+              authorization: enabled
+      h) Guarda (Ctrl + O, Enter) y sal (Ctrl + X).
+      i)  Reiniciar el servicio
+          Para que los cambios surtan efecto, reinicia el servidor usando systemctl:
+            sudo systemctl restart mongod
+      j) A partir de ahora, si escribes solo mongosh, entrarás pero no podrás ver ni tocar nada. 
+         Para identificarte, usa cualquiera de estas dos formas:
+            mongosh -u admin -p --authenticationDatabase admin
+
+          NOTA:
+            Opción B (Dentro de la shell):
+            Si ya entraste sin loguearte, puedes autenticarte dentro usando:
+                  i) Nos cambiamos primero a la BD de administracion
+                        use admin
+                  ii) Y luego nos firmamos con este comando
+                  db.auth("usr_admin", "pwd_admin")
+
+            
+
+      
+
+
