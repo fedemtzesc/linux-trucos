@@ -36,7 +36,7 @@
 	npm install @angular/cli@X.Y.Z --save-dev
    y luego usarlo con:
 	npx ng version
-	NOTA: Para poder ejecutar Angular en Winfucks es necesario correr este script en el shell:
+	NOTA: Para poder ejecutar Angular en Winfucks es necesario correr este script en el power shell:
 			Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 11.	Flag que hay que agregar a la hora de crear componentes para que no se genere el archivo de pruebas:
