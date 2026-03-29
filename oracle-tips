@@ -105,6 +105,14 @@
 20. Si quieres que nombre_usuario pueda crear otros objetos o ejecutar scripts de mantenimiento:
         GRANT CREATE TABLE, CREATE SEQUENCE, CREATE PROCEDURE TO nombre_usuario;
 
+21. Mostrar lista de usuario existentes:
+        SELECT username FROM all_users WHERE oracle_maintained = 'N';
+
+21. Comando para cambiar la contraseña de un user:
+        ALTER USER USER_NAME IDENTIFIED BY USER_PASSWORD;
+
+22. Comando para conectarse con el usuario:
+        CONNECT FDXSOFT/AhMesAmies2506@//localhost:1521/XEPDB1
 
 ****** CONFIGURACIONES EN LINUX PARA TRABAAJAR CON ORACLE ******
 1. Comando para agregar el grupo de instaladores de oracle en nuestro Linux:
