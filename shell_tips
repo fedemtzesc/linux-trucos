@@ -25,3 +25,16 @@
     a) exec bash
     b) exec zsh
 
+7. Crear un lanzador para un programa en Linux:
+
+    sudo gedit /usr/share/applications/netbeans.desktop
+
+    esta seria la plantilla:
+
+    [Desktop Entry]
+    Name=Eclipse IDE 2025-03
+    Comment=IDE Eclipse For Java
+    Exec=/home/federico/jee-2025-03/eclipse/eclipse
+    Icon=/home/federico/jee-2025-03/eclipse/icon.png
+    Terminal=false
+    Type=Application
