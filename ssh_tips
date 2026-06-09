@@ -1,0 +1,15 @@
+1. Instalar una llave publica en servidor para poder entrar directamente con ssh
+  a) Primeramente creamos la llave con un nombre significativo 
+    ssh-keygen -t ed25519 -f ~/.ssh/easyemailtemplate
+  
+  b) Y luego en tu ~/.ssh/config registras el acceso:
+      Host easyemail-dmo
+      HostName IP_DEMO
+      User federico
+      IdentityFile ~/.ssh/easyemailtemplate-dmo
+
+  c) Y finalmente, desde la maquina huesped, ejecutamos este comando hacia la maquina anfitriona
+    ssh-copy-id \ -i ~/.ssh/easyemailtemplate_dmo_deploy.pub \ federico@fdxsoft.com
+
+  d) Ya para terminar, verificamos que nos de el acceso directo usando:
+    ssh easyemail-dmo
