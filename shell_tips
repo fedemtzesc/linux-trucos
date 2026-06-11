@@ -38,3 +38,9 @@
     Icon=/home/federico/jee-2025-03/eclipse/icon.png
     Terminal=false
     Type=Application
+
+8. Copiar en el clipboard el contenido de un archivo de texto:
+    xclip -selection clipboard < archivo_de_texto.txt
+
+
+
