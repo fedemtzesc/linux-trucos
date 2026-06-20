@@ -7,7 +7,7 @@
       Host nombre_servidor_destino
       HostName IP_DEMO
       User federico
-      IdentityFile ~/.ssh/easyemailtemplate-dmo
+      IdentityFile ~/.ssh/nombre_servidor_destino
 
   c) Y finalmente, desde la maquina huesped, ejecutamos este comando hacia la maquina anfitriona
     ssh-copy-id \ -i ~/.ssh/easyemailtemplate_dmo_deploy.pub \ federico@fdxsoft.com
