@@ -3,7 +3,7 @@
     ssh-keygen -t ed25519 -f ~/.ssh/nombre_servidor_destino
   
   b) Y luego en tu ~/.ssh/config registras el acceso:
-      Host easyemail-dmo
+      Host nombre_servidor_destino
       HostName IP_DEMO
       User federico
       IdentityFile ~/.ssh/easyemailtemplate-dmo
