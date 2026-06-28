@@ -3,4 +3,3 @@
 
 2. Cortar video hasta el tiempo especificado:
       ffmpeg -i input-video.mp4 -t 00:02:10 -c:v libx264 -c:a aac trimmed-video.mp4
-
