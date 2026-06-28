@@ -1,4 +1,6 @@
 1. Incrementar el volumen de un video mp4:
       ffmpeg -i input.mp4 -af "volume=0.5" -c:v copy output.mp4
 
-      
+2. Cortar video hasta el tiempo especificado:
+      ffmpeg -i input-video.mp4 -t 00:02:10 -c:v libx264 -c:a aac trimmed-video.mp4
+
